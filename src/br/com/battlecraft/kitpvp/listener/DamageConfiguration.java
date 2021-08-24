@@ -16,11 +16,11 @@ import br.com.battlecraft.kitpvp.api.KitAPI;
 import br.com.battlecraft.kitpvp.command.essentials.DanoCommand;
 
 public final class DamageConfiguration implements Listener {
-	
+
 	/**
 	 * Esta class foi copiada do plugin OFICIAL do battlebits
 	 */
-	
+
 	@EventHandler(priority = EventPriority.HIGHEST)
 	public void onEntityDamageByEvent(EntityDamageByEntityEvent event) {
 		if (!DanoCommand.onDamage) {

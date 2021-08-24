@@ -1,6 +1,13 @@
 package br.com.battlecraft.kitpvp.battleplayer;
 
 import java.util.concurrent.TimeUnit;
+
+import org.bukkit.Bukkit;
+import org.bukkit.World;
+import org.bukkit.craftbukkit.v1_7_R4.CraftServer;
+import org.bukkit.craftbukkit.v1_7_R4.CraftWorld;
+import org.bukkit.event.Listener;
+
 import net.minecraft.server.v1_7_R4.Entity;
 import net.minecraft.server.v1_7_R4.EntityHuman;
 import net.minecraft.server.v1_7_R4.EntityLiving;
@@ -12,11 +19,6 @@ import net.minecraft.util.com.google.common.cache.LoadingCache;
 import net.minecraft.util.com.google.common.collect.Iterables;
 import net.minecraft.util.com.mojang.authlib.GameProfile;
 import net.minecraft.util.com.mojang.authlib.properties.Property;
-import org.bukkit.Bukkit;
-import org.bukkit.World;
-import org.bukkit.craftbukkit.v1_7_R4.CraftServer;
-import org.bukkit.craftbukkit.v1_7_R4.CraftWorld;
-import org.bukkit.event.Listener;
 
 public class ProfileAPI implements Listener {
 	@SuppressWarnings({ "unchecked", "rawtypes" })

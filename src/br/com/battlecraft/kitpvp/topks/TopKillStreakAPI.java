@@ -16,16 +16,16 @@ public final class TopKillStreakAPI {
 	public static HashMap<Player, Integer> KsTopSpawn = new HashMap<Player, Integer>();
 	public static HashMap<Player, Integer> KsTopFps = new HashMap<Player, Integer>();
 	public static HashMap<Player, Integer> KsTop1v1 = new HashMap<Player, Integer>();
-	
+
 	public static final void updateTopKs() {
 		Bukkit.getScheduler().scheduleSyncRepeatingTask(BukkitMain.getPlugin(), new Runnable() {
 			@Override
-			public void run() {			
-				 createTopKs();
-			}			
+			public void run() {
+				createTopKs();
+			}
 		}, 0, 30L);
 	}
-	
+
 	@SuppressWarnings("deprecation")
 	public static final void createTopKs() {
 		if (Bukkit.getOnlinePlayers().length <= 0) {
@@ -50,7 +50,7 @@ public final class TopKillStreakAPI {
 							NameFps.put(ks, nextTop);
 							KsTopSpawn.put(ks, nextTopKs);
 							KsTopFps.put(ks, nextTopKs);
-							
+
 							players.remove(nextTop);
 							nextTop = "Ninguém";
 							nextTopKs = 0;
@@ -60,7 +60,7 @@ public final class TopKillStreakAPI {
 							NameFps.put(ks, "Ninguém");
 							KsTopSpawn.put(ks, 0);
 							KsTopFps.put(ks, 0);
-							
+
 							players.remove(nextTop);
 							nextTop = "Ninguém";
 							nextTopKs = 0;

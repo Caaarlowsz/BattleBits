@@ -20,9 +20,9 @@ import br.com.battlecraft.kitpvp.warps.Fps.FpsWarpListener;
 import br.com.battlecraft.kitpvp.warps.Spawn.SpawnWarpListener;
 
 public final class Ajnin implements Listener {
-	
+
 	public static final HashMap<Player, String> ajnin = new HashMap<>();
-	
+
 	public static final void setAjninKit(final Player bp) {
 		PvP.defaultItens(bp);
 		KitAPI.setKit(bp, "Ajnin");
@@ -30,9 +30,9 @@ public final class Ajnin implements Listener {
 		bp.sendMessage("§3§lKIT§f Você selecionou o kit §b§lAjnin");
 		TittleAPI.sendTittle(bp, "§bKit Ajnin");
 		TittleAPI.sendSubTittle(bp, "§fescolhido com sucesso!");
-		bp.playSound(bp.getLocation(), Sound.LEVEL_UP,  2.0F, 1.0F);
+		bp.playSound(bp.getLocation(), Sound.LEVEL_UP, 2.0F, 1.0F);
 	}
-	
+
 	@EventHandler
 	public final void onAjninHit(final EntityDamageByEntityEvent e) {
 		if (e.isCancelled()) {
@@ -41,7 +41,8 @@ public final class Ajnin implements Listener {
 		if (e.getEntity() instanceof Player && e.getDamager() instanceof Player) {
 			final Player damaged = (Player) e.getEntity();
 			final Player damager = (Player) e.getDamager();
-			if (SpawnWarpListener.onWarpSpawnProtection.contains(damaged) || FpsWarpListener.onFpsSpawnProtection.contains(damaged)) {
+			if (SpawnWarpListener.onWarpSpawnProtection.contains(damaged)
+					|| FpsWarpListener.onFpsSpawnProtection.contains(damaged)) {
 				return;
 			}
 			if (KitAPI.getKit(damager) == "Ajnin") {
@@ -49,7 +50,7 @@ public final class Ajnin implements Listener {
 			}
 		}
 	}
-	
+
 	@EventHandler
 	public final void onSneakAjnin(final PlayerToggleSneakEvent e) {
 		final Player bp = e.getPlayer();
@@ -63,7 +64,8 @@ public final class Ajnin implements Listener {
 				bp.sendMessage("§3§lAJNIN§f O ultimo jogador hitado está a mais de §c§l50 BLOCOS§f de distancia!");
 				return;
 			}
-			if (SpawnWarpListener.onWarpSpawnProtection.contains(ajned) || FpsWarpListener.onFpsSpawnProtection.contains(ajned)) {
+			if (SpawnWarpListener.onWarpSpawnProtection.contains(ajned)
+					|| FpsWarpListener.onFpsSpawnProtection.contains(ajned)) {
 				bp.sendMessage("§3§lAJNIN§f O ultimo jogador hitado está com §8§lPROTEÇAO§f de spawn!");
 				return;
 			}

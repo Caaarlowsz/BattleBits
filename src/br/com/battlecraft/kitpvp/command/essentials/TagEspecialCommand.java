@@ -31,7 +31,7 @@ public final class TagEspecialCommand extends Command {
 			bp.sendMessage("§7- §7§lNUMB");
 			bp.sendMessage(" ");
 			bp.sendMessage("§fPara selecionar uma tag utilize: /tagespecial <tag>");
-			return true;			
+			return true;
 		}
 		if (args.length == 1) {
 			final String tag = args[0];
@@ -63,7 +63,7 @@ public final class TagEspecialCommand extends Command {
 			bp.sendMessage("§7- §7§lNUMB");
 			bp.sendMessage(" ");
 			bp.sendMessage("§fPara selecionar uma tag utilize: /tagespecial <tag>");
-			return true;			
+			return true;
 		}
 		return false;
 	}

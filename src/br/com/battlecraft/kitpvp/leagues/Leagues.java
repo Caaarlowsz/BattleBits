@@ -30,7 +30,7 @@ public final class Leagues {
 	public static final String MASTER_NAME = "§c" + "MASTER";
 	public static final String LEGENDARY_NAME = "§4" + "LEGENDARY";
 	public static final String CHALLENGER_NAME = "§3" + "CHALLENGER";
-	
+
 	public static final String space = " ";
 
 	public static final String getBattlePlayerLeagueInChat(final Player bp) {
@@ -60,7 +60,7 @@ public final class Leagues {
 		}
 		return getBattlePlayerLeagueInChat(bp);
 	}
-	
+
 	public static final String getBattlePlayerLeagueInScore(final Player bp) {
 		final int XP = AccountAPI.getBattlePlayerXp(bp);
 		if (XP <= 2999) {
@@ -80,7 +80,7 @@ public final class Leagues {
 		} else if (XP >= 40000 && XP <= 49999) {
 			return ELITE_SYMBOL + space + ELITE_NAME;
 		} else if (XP >= 50000 && XP <= 69999) {
-			return  MASTER_SYMBOL + space + MASTER_NAME;
+			return MASTER_SYMBOL + space + MASTER_NAME;
 		} else if (XP >= 70000 && XP <= 99999) {
 			return LEGENDARY_SYMBOL + space + LEGENDARY_NAME;
 		} else if (XP >= 100000) {
@@ -88,7 +88,7 @@ public final class Leagues {
 		}
 		return getBattlePlayerLeagueInScore(bp);
 	}
-	
+
 	public static final String getBattlePlayerLeagueInScore(final OfflinePlayer bp) {
 		final int XP = AccountAPI.getBattlePlayerXp(bp);
 		if (XP <= 2999) {
@@ -108,7 +108,7 @@ public final class Leagues {
 		} else if (XP >= 40000 && XP <= 49999) {
 			return ELITE_SYMBOL + space + ELITE_NAME;
 		} else if (XP >= 50000 && XP <= 69999) {
-			return  MASTER_SYMBOL + space + MASTER_NAME;
+			return MASTER_SYMBOL + space + MASTER_NAME;
 		} else if (XP >= 70000 && XP <= 99999) {
 			return LEGENDARY_SYMBOL + space + LEGENDARY_NAME;
 		} else if (XP >= 100000) {
@@ -116,7 +116,7 @@ public final class Leagues {
 		}
 		return getBattlePlayerLeagueInScore(bp);
 	}
-	
+
 	public static final String getBattlePlayerLeagueInCommand(final Player bp) {
 		final int XP = AccountAPI.getBattlePlayerXp(bp);
 		if (XP <= 2999) {
@@ -136,7 +136,7 @@ public final class Leagues {
 		} else if (XP >= 40000 && XP <= 49999) {
 			return "§5§l" + "✹" + space + "ELITE";
 		} else if (XP >= 50000 && XP <= 69999) {
-			return  "§c§l" + "✫" + space + "MASTER";
+			return "§c§l" + "✫" + space + "MASTER";
 		} else if (XP >= 70000 && XP <= 99999) {
 			return "§4§l" + "✪" + space + "LEGENDARY";
 		} else if (XP >= 100000) {
@@ -144,7 +144,7 @@ public final class Leagues {
 		}
 		return getBattlePlayerLeagueInCommand(bp);
 	}
-	
+
 	public static final String getBattlePlayerLeagueByXp(final int XP) {
 		if (XP <= 2999) {
 			return "§f" + "-" + space + "UNRANKED";
@@ -163,7 +163,7 @@ public final class Leagues {
 		} else if (XP >= 40000 && XP <= 49999) {
 			return "§5" + "✹" + space + "ELITE";
 		} else if (XP >= 50000 && XP <= 69999) {
-			return  "§c" + "✫" + space + "MASTER";
+			return "§c" + "✫" + space + "MASTER";
 		} else if (XP >= 70000 && XP <= 99999) {
 			return "§4" + "✪" + space + "LEGENDARY";
 		} else if (XP >= 100000) {
@@ -171,7 +171,7 @@ public final class Leagues {
 		}
 		return getBattlePlayerLeagueByXp(XP);
 	}
-	
+
 	public static final String getBattlePlayerNextLeague(final Player bp) {
 		final int XP = AccountAPI.getBattlePlayerXp(bp);
 		if (XP <= 2999) {
@@ -191,7 +191,7 @@ public final class Leagues {
 		} else if (XP >= 40000 && XP <= 49999) {
 			return "§c§l" + "✫" + space + "MASTER";
 		} else if (XP >= 50000 && XP <= 69999) {
-			return  "§4§l" + "✪" + space + "LEGENDARY";
+			return "§4§l" + "✪" + space + "LEGENDARY";
 		} else if (XP >= 70000 && XP <= 99999) {
 			return "§3§l" + "☯" + space + "CHALLENGER";
 		} else if (XP >= 100000) {
@@ -199,7 +199,7 @@ public final class Leagues {
 		}
 		return getBattlePlayerNextLeague(bp);
 	}
-	
+
 	public static final int getBattlePlayerLeagueXpLeft(final Player bp) {
 		final int XP = AccountAPI.getBattlePlayerXp(bp);
 		if (XP < 3000) {

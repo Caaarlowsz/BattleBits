@@ -1,7 +1,7 @@
 package br.com.battlecraft.kitpvp.utils;
 
 public final class TimeConverter {
-	
+
 	public static String ConvertTime(int i) {
 		int minutos = (int) i / 60;
 		int segundos = i - minutos * 60;

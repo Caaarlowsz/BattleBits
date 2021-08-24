@@ -19,11 +19,12 @@ import br.com.battlecraft.kitpvp.api.KitAPI;
 import br.com.battlecraft.kitpvp.api.TittleAPI;
 import br.com.battlecraft.kitpvp.combat.CombatSystem;
 import br.com.battlecraft.kitpvp.warps.Spawn.SpawnItens;
+
 public final class Kangaroo implements Listener {
-	
+
 	public static ArrayList<String> delay = new ArrayList<>();
 	public static ArrayList<String> cancell = new ArrayList<>();
-	
+
 	public static final void setKangarooKit(final Player bp) {
 		PvP.defaultItens(bp);
 		KitAPI.setKit(bp, "Kangaroo");
@@ -32,20 +33,20 @@ public final class Kangaroo implements Listener {
 		bp.sendMessage("§3§lKIT§f Você selecionou o kit §b§lKangaroo");
 		TittleAPI.sendTittle(bp, "§bKit Kangaroo");
 		TittleAPI.sendSubTittle(bp, "§fescolhido com sucesso!");
-		bp.playSound(bp.getLocation(), Sound.LEVEL_UP,  2.0F, 1.0F);
+		bp.playSound(bp.getLocation(), Sound.LEVEL_UP, 2.0F, 1.0F);
 	}
 
 	@EventHandler
 	public void onFall(final EntityDamageEvent e) {
 		if (e.getEntity() instanceof Player) {
 			Player p = (Player) e.getEntity();
-			if (((e.getEntity() instanceof Player)) && (e.getCause() == EntityDamageEvent.DamageCause.FALL) && (KitAPI.getKit(p) == "Kangaroo" 
-					&& (e.getDamage() >= 9.0D)) && !e.isCancelled()) {
+			if (((e.getEntity() instanceof Player)) && (e.getCause() == EntityDamageEvent.DamageCause.FALL)
+					&& (KitAPI.getKit(p) == "Kangaroo" && (e.getDamage() >= 9.0D)) && !e.isCancelled()) {
 				e.setDamage(9.0D);
 			}
 		}
 	}
-	
+
 	@EventHandler
 	public void aoDelay(final PlayerMoveEvent e) {
 		Player p = e.getPlayer();
@@ -56,7 +57,7 @@ public final class Kangaroo implements Listener {
 			}
 		}
 	}
-	
+
 	@EventHandler
 	public void aoKangaroo(final PlayerInteractEvent e) {
 		Player p = e.getPlayer();

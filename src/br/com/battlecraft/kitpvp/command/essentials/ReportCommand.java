@@ -20,9 +20,10 @@ public final class ReportCommand extends Command {
 	public ReportCommand(String name, String description, String usageMessage, List<String> aliases) {
 		super(name, description, usageMessage, aliases);
 	}
-	
+
 	public static final HashMap<String, Integer> reportCooldown = new HashMap<>();
 	private static int Task;
+
 	public static final void runCooldown(final Player bp) {
 		if (reportCooldown.containsKey(bp.getName())) {
 			Task = Bukkit.getScheduler().scheduleSyncRepeatingTask(BukkitMain.getPlugin(), new Runnable() {
@@ -33,7 +34,7 @@ public final class ReportCommand extends Command {
 						reportCooldown.remove(bp.getName());
 						Bukkit.getScheduler().cancelTask(Task);
 					}
-				}			
+				}
 			}, 0, 20L);
 		}
 	}
@@ -48,7 +49,8 @@ public final class ReportCommand extends Command {
 		final Player battleplayer = (Player) sender;
 		if (args.length == 0) {
 			if (battleplayer.hasPermission("pvp.cmd.report")) {
-				battleplayer.sendMessage("§3§lREPORT§f Utilize: /report <list/check/clear> ou /report <player> (motivo)");
+				battleplayer
+						.sendMessage("§3§lREPORT§f Utilize: /report <list/check/clear> ou /report <player> (motivo)");
 				return true;
 			} else {
 				battleplayer.sendMessage("§3§lREPORT§f Utilize: /report <player> (motivo)");
@@ -60,7 +62,8 @@ public final class ReportCommand extends Command {
 				battleplayer.sendMessage("§3§lREPORT§f Voce precisa colocar um §c§lmotivo§f!");
 				return true;
 			}
-			if (!ReportsAPI.totalReports.containsKey(battleplayer.getName()) || ReportsAPI.totalReports.get(battleplayer.getName()) <= 0) {
+			if (!ReportsAPI.totalReports.containsKey(battleplayer.getName())
+					|| ReportsAPI.totalReports.get(battleplayer.getName()) <= 0) {
 				battleplayer.sendMessage("§3§lREPORT§f Voce nao §c§lPOSSUI NENHUM§3§l REPORT§f!");
 				return true;
 			}
@@ -76,11 +79,13 @@ public final class ReportCommand extends Command {
 				battleplayer.sendMessage("§3§lREPORT§f Voce precisa colocar um §c§lmotivo§f!");
 				return true;
 			}
-			if (!ReportsAPI.totalReports.containsKey(battleplayer.getName()) || ReportsAPI.totalReports.get(battleplayer.getName()) <= 0) {
+			if (!ReportsAPI.totalReports.containsKey(battleplayer.getName())
+					|| ReportsAPI.totalReports.get(battleplayer.getName()) <= 0) {
 				battleplayer.sendMessage("§3§lREPORT§f Voce nao §c§lPOSSUI NENHUM§3§l REPORT§f!");
 				return true;
 			}
-			battleplayer.sendMessage("§3§lREPORT§f Você tem §3§l" + ReportsAPI.totalReports.get(battleplayer.getName()) + " REPORTs§f no momento!");
+			battleplayer.sendMessage("§3§lREPORT§f Você tem §3§l" + ReportsAPI.totalReports.get(battleplayer.getName())
+					+ " REPORTs§f no momento!");
 			return true;
 		}
 		if (args[0].equalsIgnoreCase("list") && args.length == 1) {
@@ -88,7 +93,8 @@ public final class ReportCommand extends Command {
 				battleplayer.sendMessage("§3§lREPORT§f Voce precisa colocar um §c§lmotivo§f!");
 				return true;
 			}
-			if (!ReportsAPI.totalReports.containsKey(battleplayer.getName()) || ReportsAPI.totalReports.get(battleplayer.getName()) <= 0) {
+			if (!ReportsAPI.totalReports.containsKey(battleplayer.getName())
+					|| ReportsAPI.totalReports.get(battleplayer.getName()) <= 0) {
 				battleplayer.sendMessage("§3§lREPORT§f Voce nao §c§lPOSSUI NENHUM§3§l REPORT§f!");
 				return true;
 			}
@@ -109,7 +115,9 @@ public final class ReportCommand extends Command {
 			return true;
 		}
 		if (reportCooldown.containsKey(battleplayer.getName())) {
-			battleplayer.sendMessage("§3§lREPORT§f Aguarde §c§l" + TimeConverter.ConvertTime(reportCooldown.get(battleplayer.getName())) + " §f para reportar novamente!");
+			battleplayer.sendMessage(
+					"§3§lREPORT§f Aguarde §c§l" + TimeConverter.ConvertTime(reportCooldown.get(battleplayer.getName()))
+							+ " §f para reportar novamente!");
 			return true;
 		}
 		if (!battleplayer.hasPermission("pvp.cmd.report")) {
@@ -123,5 +131,5 @@ public final class ReportCommand extends Command {
 		}
 		battleplayer.sendMessage("§3§lREPORT§f Seu §b§lREPORT§f foi §a§lenviado com sucesso§f!");
 		return true;
-	}	
+	}
 }

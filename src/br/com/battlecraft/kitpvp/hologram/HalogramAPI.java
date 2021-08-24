@@ -126,7 +126,8 @@ public final class HalogramAPI {
 	@SuppressWarnings("deprecation")
 	public static final void topXpHologramLoader() {
 		if (!LocationsConstructor.checkBattleWarpNotNull("Hologram")) {
-			Bukkit.getConsoleSender().sendMessage("§a§lHOLOGRAM TOP XP§f Você precisa setar o local §a§lhologram§f com /set hl");
+			Bukkit.getConsoleSender()
+					.sendMessage("§a§lHOLOGRAM TOP XP§f Você precisa setar o local §a§lhologram§f com /set hl");
 			return;
 		}
 		addHalogram(LocationsConstructor.getBattleWarpLocation("Hologram"), TopXP().toArray(new String[] {}));

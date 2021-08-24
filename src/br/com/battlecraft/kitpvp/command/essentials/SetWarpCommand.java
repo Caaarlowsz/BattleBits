@@ -35,7 +35,8 @@ public final class SetWarpCommand extends Command {
 			return true;
 		} else if (args.length == 1 && args.length < 2) {
 			if (!WarpCommand.validWarpName(WarpsAPI.convertWarpName(args[0]))
-					&& !WarpsAPI.convertWarpName(args[0]).equalsIgnoreCase("1v1loc1") && !WarpsAPI.convertWarpName(args[0]).equalsIgnoreCase("1v1loc2")) {
+					&& !WarpsAPI.convertWarpName(args[0]).equalsIgnoreCase("1v1loc1")
+					&& !WarpsAPI.convertWarpName(args[0]).equalsIgnoreCase("1v1loc2")) {
 				battleplayer.sendMessage("§3§lLOCAL§f Este local nao esta §c§lpre-registrado§f para ser setado.");
 				return true;
 			}

@@ -22,7 +22,7 @@ import br.com.battlecraft.kitpvp.warps.Spawn.SpawnItens;
 public final class Phantom implements Listener {
 
 	public static HashMap<Player, ItemStack[]> salvarArmadura = new HashMap<>();
-	
+
 	public static final void setPhantomKit(final Player bp) {
 		PvP.defaultItens(bp);
 		KitAPI.setKit(bp, "Phantom");
@@ -31,7 +31,7 @@ public final class Phantom implements Listener {
 		bp.sendMessage("§3§lKIT§f Você selecionou o kit §b§lPhantom");
 		TittleAPI.sendTittle(bp, "§bKit Phantom");
 		TittleAPI.sendSubTittle(bp, "§fescolhido com sucesso!");
-		bp.playSound(bp.getLocation(), Sound.LEVEL_UP,  2.0F, 1.0F);
+		bp.playSound(bp.getLocation(), Sound.LEVEL_UP, 2.0F, 1.0F);
 	}
 
 	@EventHandler

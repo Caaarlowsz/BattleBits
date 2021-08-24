@@ -11,7 +11,7 @@ import org.bukkit.entity.Player;
 import br.com.battlecraft.kitpvp.BukkitMain;
 
 public class XpAPI {
-	
+
 	/**
 	 * API old (remade v1)
 	 */
@@ -54,7 +54,7 @@ public class XpAPI {
 		Xp.set(p.getName(), getXp(p) - Qntd);
 		saveXp();
 	}
-	
+
 	public static int getXp(OfflinePlayer p) {
 		return (int) Xp.getInt(p.getName());
 	}

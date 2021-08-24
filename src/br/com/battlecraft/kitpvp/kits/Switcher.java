@@ -15,7 +15,7 @@ import br.com.battlecraft.kitpvp.api.KitAPI;
 import br.com.battlecraft.kitpvp.api.TittleAPI;
 
 public final class Switcher implements Listener {
-	
+
 	public static final void setSwitcherKit(final Player bp) {
 		PvP.defaultItens(bp);
 		KitAPI.setKit(bp, "Switcher");
@@ -24,7 +24,7 @@ public final class Switcher implements Listener {
 		bp.sendMessage("§3§lKIT§f Você selecionou o kit §b§lSwitcher");
 		TittleAPI.sendTittle(bp, "§bKit Switcher");
 		TittleAPI.sendSubTittle(bp, "§fescolhido com sucesso!");
-		bp.playSound(bp.getLocation(), Sound.LEVEL_UP,  2.0F, 1.0F);
+		bp.playSound(bp.getLocation(), Sound.LEVEL_UP, 2.0F, 1.0F);
 	}
 
 	@SuppressWarnings("deprecation")

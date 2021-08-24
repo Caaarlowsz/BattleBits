@@ -35,8 +35,8 @@ public final class ScreenshareSystem {
 			}
 			for (Player all : Bukkit.getOnlinePlayers()) {
 				if (all.hasPermission("pvp.cmd.ss")) {
-					all.sendMessage("§c§lSCREENSHARE§f " + staffer.getName() + " §a§lLIBEROU§f o player §e" + ss.getName()
-					+ "§f da §c§lscreenshare§f!");
+					all.sendMessage("§c§lSCREENSHARE§f " + staffer.getName() + " §a§lLIBEROU§f o player §e"
+							+ ss.getName() + "§f da §c§lscreenshare§f!");
 				}
 			}
 			Bukkit.getScheduler().scheduleSyncDelayedTask(BukkitMain.getPlugin(), new Runnable() {
@@ -79,8 +79,7 @@ public final class ScreenshareSystem {
 		if (X1WarpListener.firstMatch == staffer.getUniqueId()) {
 			X1WarpListener.firstMatch = null;
 		}
-		if (WarpsAPI.battlePlayerWarp.get(ss) == WarpsAPI.Warps.ONEVSONE
-				&& X1WarpListener.playerfigh.containsKey(ss)) {
+		if (WarpsAPI.battlePlayerWarp.get(ss) == WarpsAPI.Warps.ONEVSONE && X1WarpListener.playerfigh.containsKey(ss)) {
 			Player k = Bukkit.getPlayerExact(X1WarpListener.playerfigh.get(ss));
 			X1WarpListener.fighting.remove(k);
 			X1WarpListener.fighting.remove(ss);
@@ -127,13 +126,14 @@ public final class ScreenshareSystem {
 		for (Player all : Bukkit.getOnlinePlayers()) {
 			if (all.hasPermission("pvp.cmd.ss")) {
 				all.sendMessage("§c§lSCREENSHARE§f " + staffer.getName() + " §c§lPUXOU§f o player §e" + ss.getName()
-				+ "§f para §c§lscreenshare§f!");
+						+ "§f para §c§lscreenshare§f!");
 			}
 		}
 		ss.sendMessage("§c§lSCREENSHARE§f Você foi puxado para §c§lscreenshare§f!");
 		ss.sendMessage("§c§lSCREENSHARE§f Siga os passos do staffer §e§l" + staffer.getName()
 				+ "§f para nao ter §c§lproblemas§f!");
 		staffer.sendMessage("§c§lSCREENSHARE§f Você puxou o jogador §e§l" + ss.getName());
-		Bukkit.broadcast("§c§lSCREENSHARE§f " + staffer.getName() + " puxou o player §e§l" + ss.getName() + "§f para §c§lscreenshare§f!", "pvp.cmd.ss");
+		Bukkit.broadcast("§c§lSCREENSHARE§f " + staffer.getName() + " puxou o player §e§l" + ss.getName()
+				+ "§f para §c§lscreenshare§f!", "pvp.cmd.ss");
 	}
 }

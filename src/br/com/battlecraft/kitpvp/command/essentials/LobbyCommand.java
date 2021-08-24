@@ -17,7 +17,7 @@ public final class LobbyCommand extends Command {
 	public LobbyCommand(String name, String description, String usageMessage, List<String> aliases) {
 		super(name, description, usageMessage, aliases);
 	}
-	
+
 	public static final void connect(Player player, String serverName) {
 		ByteArrayDataOutput output = ByteStreams.newDataOutput();
 		output.writeUTF("Connect");

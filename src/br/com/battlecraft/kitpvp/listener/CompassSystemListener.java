@@ -20,7 +20,8 @@ public final class CompassSystemListener implements Listener {
 			e.setCancelled(true);
 			if (WarpAPI.getWarp(e.getPlayer()) == "PVP") {
 				for (Entity players : e.getPlayer().getNearbyEntities(100, 150, 100)) {
-					if ((players instanceof Player) && e.getPlayer().getLocation().distance(players.getLocation()) >= 10 && !VanishSystem.isVanished((Player)players)) {
+					if ((players instanceof Player) && e.getPlayer().getLocation().distance(players.getLocation()) >= 10
+							&& !VanishSystem.isVanished((Player) players)) {
 						if (players.getLocation().getY() > 170) {
 							return;
 						}

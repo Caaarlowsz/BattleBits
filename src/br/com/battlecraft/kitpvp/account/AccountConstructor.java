@@ -23,7 +23,7 @@ public final class AccountConstructor {
 		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
 		return sdf.format(calendar.getTime());
 	}
-	
+
 	public static String BrasilTime() {
 		TimeZone tz = TimeZone.getTimeZone("America/Brasil");
 		Calendar calendar = GregorianCalendar.getInstance(tz);

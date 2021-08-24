@@ -136,8 +136,7 @@ public final class SpawnWarpListener implements Listener {
 					&& !FlyCommand.hasFly.contains(battleplayer)) {
 				onWarpSpawnProtection.remove(battleplayer);
 				battleplayer.sendMessage(BukkitMain.getLostedSpawnProtectionMessage());
-			} else if (battleplayer.getLocation()
-					.distance(LocationsConstructor.getBattleWarpLocation("Spawn")) > 250.0D
+			} else if (battleplayer.getLocation().distance(LocationsConstructor.getBattleWarpLocation("Spawn")) > 250.0D
 					&& FlyCommand.hasFly.contains(battleplayer)) {
 				LocationsConstructor.teleportToBattleWarpLocation(battleplayer, "Spawn");
 				battleplayer

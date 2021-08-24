@@ -18,8 +18,8 @@ public final class WarpCommand extends Command {
 		super(name, description, usageMessage, aliases);
 	}
 
-	public static final String[] warpsList = { "Spawn", "Fps", "1v1", "LavaChallenge", "Capiroto",
-			"Evento", "Gladiator", "Hologram", "Halogram", "Holograma", "Hl", "Screenshare" };
+	public static final String[] warpsList = { "Spawn", "Fps", "1v1", "LavaChallenge", "Capiroto", "Evento",
+			"Gladiator", "Hologram", "Halogram", "Holograma", "Hl", "Screenshare" };
 
 	public static final boolean validWarpName(final String args) {
 		for (String warps : warpsList) {

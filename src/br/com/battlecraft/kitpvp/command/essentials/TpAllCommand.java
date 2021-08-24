@@ -58,10 +58,11 @@ public final class TpAllCommand extends Command {
 					}
 				}
 				all.setHealth(20);
-				all.teleport(bp);			
+				all.teleport(bp);
 			}
 			bp.sendMessage("§6§lTPALL§f Voce §e§lTELEPORTOU§f todos os jogadores para voce!");
-			Bukkit.getServer().broadcastMessage("§6§lTPALL§f Todos os jogadores foram §e§lTELEPORTADOS§f para " + bp.getName());
+			Bukkit.getServer()
+					.broadcastMessage("§6§lTPALL§f Todos os jogadores foram §e§lTELEPORTADOS§f para " + bp.getName());
 			return true;
 		}
 		return false;

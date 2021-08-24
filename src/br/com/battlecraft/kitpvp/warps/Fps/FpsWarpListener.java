@@ -30,7 +30,7 @@ public class FpsWarpListener implements Listener {
 				? Integer.valueOf(LocationsFile.getWarpsFile().getInt("SpawnProtections." + "FPS" + ".Distance"))
 				: MAX_DISTANCE_FPS_SPAWN);
 	}
-	
+
 	public static final void loadFpsWarpMethods(final Player bp) {
 		WarpAPI.setWarp(bp, "FPS");
 		if (SpawnWarpListener.onWarpSpawnProtection.contains(bp)) {

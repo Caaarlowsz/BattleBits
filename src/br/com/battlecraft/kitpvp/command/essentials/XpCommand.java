@@ -17,7 +17,7 @@ public final class XpCommand extends Command {
 	public XpCommand(String name, String description, String usageMessage, List<String> aliases) {
 		super(name, description, usageMessage, aliases);
 	}
-	
+
 	@Override
 	public boolean execute(final CommandSender sender, final String arg1, final String[] args) {
 		if (!BukkitMain.NotInGame(sender)) {
@@ -47,8 +47,7 @@ public final class XpCommand extends Command {
 								"§9§lXP§f Você adicionou §9§l" + args[2] + " XPs§f para a conta do player " + args[1]);
 						return true;
 					} catch (Exception e) {
-						bp.sendMessage(
-								"§9§lXP§f Utilize apenas §9§lNUMEROS§f para indicar a quantidade de §9§lXPs§f!");
+						bp.sendMessage("§9§lXP§f Utilize apenas §9§lNUMEROS§f para indicar a quantidade de §9§lXPs§f!");
 						return true;
 					}
 				} else if (args[0].equalsIgnoreCase("remove")) {
@@ -62,8 +61,7 @@ public final class XpCommand extends Command {
 						bp.sendMessage("§9§lXP§f Você removeu §9§l" + args[2] + " XPs§f da conta do player " + args[1]);
 						return true;
 					} catch (Exception e) {
-						bp.sendMessage(
-								"§9§lXP§f Utilize apenas §9§lNUMEROS§f para indicar a quantidade de §9§lXPs§f!");
+						bp.sendMessage("§9§lXP§f Utilize apenas §9§lNUMEROS§f para indicar a quantidade de §9§lXPs§f!");
 						return true;
 					}
 				}
@@ -74,12 +72,13 @@ public final class XpCommand extends Command {
 			} else if (args[0].equalsIgnoreCase("add")) {
 				try {
 					AccountAPI.addBattlePlayerXp(m, Integer.valueOf(args[2]));
-					m.sendMessage("§9§lXP§f Foram §a§ladicionadas§f na sua conta §9§l" + args[2] + " XPs§f pelo " + bp.getName());
-					bp.sendMessage("§9§lXP§f Você adicionou §9§l" + args[2] + " XPs§f para a conta do player " + args[1]);
+					m.sendMessage("§9§lXP§f Foram §a§ladicionadas§f na sua conta §9§l" + args[2] + " XPs§f pelo "
+							+ bp.getName());
+					bp.sendMessage(
+							"§9§lXP§f Você adicionou §9§l" + args[2] + " XPs§f para a conta do player " + args[1]);
 					return true;
 				} catch (Exception e) {
-					bp.sendMessage(
-							"§9§lXP§f Utilize apenas §9§lNUMEROS§f para indicar a quantidade de §9§lXPs§f!");
+					bp.sendMessage("§9§lXP§f Utilize apenas §9§lNUMEROS§f para indicar a quantidade de §9§lXPs§f!");
 					return true;
 				}
 			} else if (args[0].equalsIgnoreCase("remove")) {
@@ -90,12 +89,12 @@ public final class XpCommand extends Command {
 						return true;
 					}
 					AccountAPI.removeBattlePlayerXp(m, Integer.valueOf(args[2]));
-					m.sendMessage("§9§lXP§f Foram §c§lremovidas§f da sua conta §9§l" + args[2] + " XPs§f pelo " + bp.getName());
+					m.sendMessage("§9§lXP§f Foram §c§lremovidas§f da sua conta §9§l" + args[2] + " XPs§f pelo "
+							+ bp.getName());
 					bp.sendMessage("§9§lXP§f Você removeu §9§l" + args[2] + " XPs§f da conta do player " + args[1]);
 					return true;
 				} catch (Exception e) {
-					bp.sendMessage(
-							"§9§lXP§f Utilize apenas §9§lNUMEROS§f para indicar a quantidade de §9§lXPs§f!");
+					bp.sendMessage("§9§lXP§f Utilize apenas §9§lNUMEROS§f para indicar a quantidade de §9§lXPs§f!");
 					return true;
 				}
 			}

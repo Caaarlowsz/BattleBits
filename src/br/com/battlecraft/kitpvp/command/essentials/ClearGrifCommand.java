@@ -42,7 +42,7 @@ public final class ClearGrifCommand extends Command {
 			}
 		}
 	}
-	
+
 	public static final int MAX_DISTANCE = 200;
 
 	@Override
@@ -64,7 +64,8 @@ public final class ClearGrifCommand extends Command {
 			if (args[0].equalsIgnoreCase("water") || args[0].equalsIgnoreCase("agua")) {
 				try {
 					if (Integer.valueOf(args[1]) > MAX_DISTANCE) {
-						bp.sendMessage("§4§lERRO§f A distancia maxima para raios permitidas é de §c§l" + MAX_DISTANCE + " BLOCOS§f!");
+						bp.sendMessage("§4§lERRO§f A distancia maxima para raios permitidas é de §c§l" + MAX_DISTANCE
+								+ " BLOCOS§f!");
 						return true;
 					}
 					if (Integer.valueOf(args[1]) <= 0) {
@@ -82,7 +83,8 @@ public final class ClearGrifCommand extends Command {
 			} else if (args[0].equalsIgnoreCase("lava")) {
 				try {
 					if (Integer.valueOf(args[1]) > MAX_DISTANCE) {
-						bp.sendMessage("§4§lERRO§f A distancia maxima para raios permitidas é de §c§l" + MAX_DISTANCE + " BLOCOS§f!");
+						bp.sendMessage("§4§lERRO§f A distancia maxima para raios permitidas é de §c§l" + MAX_DISTANCE
+								+ " BLOCOS§f!");
 						return true;
 					}
 					if (Integer.valueOf(args[1]) <= 0) {

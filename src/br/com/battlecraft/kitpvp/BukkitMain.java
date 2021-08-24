@@ -95,8 +95,8 @@ import br.com.battlecraft.kitpvp.listener.BattlePlayerQuitEvent;
 import br.com.battlecraft.kitpvp.listener.BattlePlayersChatFormatEvent;
 import br.com.battlecraft.kitpvp.listener.CompassSystemListener;
 import br.com.battlecraft.kitpvp.listener.DamageConfiguration;
-import br.com.battlecraft.kitpvp.listener.InteractFramesEvent;
 import br.com.battlecraft.kitpvp.listener.EntityDamageByEntity;
+import br.com.battlecraft.kitpvp.listener.InteractFramesEvent;
 import br.com.battlecraft.kitpvp.listener.MainListeners;
 import br.com.battlecraft.kitpvp.listener.MotdManager;
 import br.com.battlecraft.kitpvp.messages.AutomaticMessages;
@@ -212,8 +212,7 @@ public class BukkitMain extends JavaPlugin {
 	@SuppressWarnings("deprecation")
 	public final void onDisable() {
 		for (Player all : Bukkit.getOnlinePlayers()) {
-			all.kickPlayer(
-					"§cO servidor esta reiniciando/desligando");
+			all.kickPlayer("§cO servidor esta reiniciando/desligando");
 		}
 	}
 
@@ -393,16 +392,16 @@ public class BukkitMain extends JavaPlugin {
 
 			commandMap.register("pvp", new LobbyCommand("lobby", "Comando para conectar ao Lobby", "/lobby",
 					Arrays.asList("hub", "sair")));
-			
-			commandMap.register("pvp", new PvPCommand("pvp", "Comando para ativar/desativar pvp", "/pvp",
-					Arrays.asList("setpvp")));
-			
-			commandMap.register("pvp", new DanoCommand("dano", "Comando para ativar/desativar dano", "/dano",
-					Arrays.asList("damage")));
-			
+
+			commandMap.register("pvp",
+					new PvPCommand("pvp", "Comando para ativar/desativar pvp", "/pvp", Arrays.asList("setpvp")));
+
+			commandMap.register("pvp",
+					new DanoCommand("dano", "Comando para ativar/desativar dano", "/dano", Arrays.asList("damage")));
+
 			commandMap.register("pvp", new SetGroupCommand("setgroup", "Comando para setar grupos", "/setgroup",
 					Arrays.asList("groupset", "givevip", "removevip")));
-			
+
 			commandMap.register("pvp", new TpAllCommand("tpall", "Comando para teleportar todos jogadores", "/tpall",
 					Arrays.asList("puxartodos")));
 

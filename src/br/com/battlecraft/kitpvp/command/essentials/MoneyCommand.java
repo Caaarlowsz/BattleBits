@@ -43,8 +43,8 @@ public final class MoneyCommand extends Command {
 				} else if (args[0].equalsIgnoreCase("add")) {
 					try {
 						AccountAPI.addBattlePlayerMoney(moff, Integer.valueOf(args[2]));
-						bp.sendMessage(
-								"§6§lMONEY§f Você adicionou §6§l" + args[2] + " MOEDAS§f para a conta do player " + args[1]);
+						bp.sendMessage("§6§lMONEY§f Você adicionou §6§l" + args[2] + " MOEDAS§f para a conta do player "
+								+ args[1]);
 						return true;
 					} catch (Exception e) {
 						bp.sendMessage(
@@ -59,7 +59,8 @@ public final class MoneyCommand extends Command {
 							return true;
 						}
 						AccountAPI.removeBattlePlayerMoney(moff, Integer.valueOf(args[2]));
-						bp.sendMessage("§6§lMONEY§f Você removeu §6§l" + args[2] + " MOEDAS§f da conta do player " + args[1]);
+						bp.sendMessage(
+								"§6§lMONEY§f Você removeu §6§l" + args[2] + " MOEDAS§f da conta do player " + args[1]);
 						return true;
 					} catch (Exception e) {
 						bp.sendMessage(
@@ -74,8 +75,10 @@ public final class MoneyCommand extends Command {
 			} else if (args[0].equalsIgnoreCase("add")) {
 				try {
 					AccountAPI.addBattlePlayerMoney(m, Integer.valueOf(args[2]));
-					m.sendMessage("§6§lMONEY§f Foram §a§ladicionadas§f na sua conta §6§l" + args[2] + " MOEDAS§f pelo " + bp.getName());
-					bp.sendMessage("§6§lMONEY§f Você adicionou §6§l" + args[2] + " MOEDAS§f para a conta do player " + args[1]);
+					m.sendMessage("§6§lMONEY§f Foram §a§ladicionadas§f na sua conta §6§l" + args[2] + " MOEDAS§f pelo "
+							+ bp.getName());
+					bp.sendMessage("§6§lMONEY§f Você adicionou §6§l" + args[2] + " MOEDAS§f para a conta do player "
+							+ args[1]);
 					return true;
 				} catch (Exception e) {
 					bp.sendMessage(
@@ -90,8 +93,10 @@ public final class MoneyCommand extends Command {
 						return true;
 					}
 					AccountAPI.removeBattlePlayerMoney(m, Integer.valueOf(args[2]));
-					m.sendMessage("§6§lMONEY§f Foram §c§lremovidas§f da sua conta §6§l" + args[2] + " MOEDAS§f pelo " + bp.getName());
-					bp.sendMessage("§6§lMONEY§f Você removeu §6§l" + args[2] + " MOEDAS§f da conta do player " + args[1]);
+					m.sendMessage("§6§lMONEY§f Foram §c§lremovidas§f da sua conta §6§l" + args[2] + " MOEDAS§f pelo "
+							+ bp.getName());
+					bp.sendMessage(
+							"§6§lMONEY§f Você removeu §6§l" + args[2] + " MOEDAS§f da conta do player " + args[1]);
 					return true;
 				} catch (Exception e) {
 					bp.sendMessage(

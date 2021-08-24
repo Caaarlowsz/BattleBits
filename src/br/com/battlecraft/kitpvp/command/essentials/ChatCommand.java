@@ -13,7 +13,7 @@ public final class ChatCommand extends Command {
 	public ChatCommand(String name, String description, String usageMessage, List<String> aliases) {
 		super(name, description, usageMessage, aliases);
 	}
-	
+
 	public static boolean chatMode = true;
 
 	@Override
@@ -55,7 +55,7 @@ public final class ChatCommand extends Command {
 				sender.sendMessage("§4§lCHAT§f Utilize: /chat <on/off/clear>");
 				return true;
 			}
-		} 
+		}
 		if (args.length > 1) {
 			sender.sendMessage("§4§lCHAT§f Utilize: /chat <on/off/clear>");
 			return true;

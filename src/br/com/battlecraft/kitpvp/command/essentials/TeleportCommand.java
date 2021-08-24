@@ -15,7 +15,7 @@ public final class TeleportCommand extends Command {
 	public TeleportCommand(String name, String description, String usageMessage, List<String> aliases) {
 		super(name, description, usageMessage, aliases);
 	}
-	
+
 	@Override
 	public boolean execute(final CommandSender sender, final String label, final String[] args) {
 		if (!(sender instanceof Player)) {
@@ -28,7 +28,8 @@ public final class TeleportCommand extends Command {
 			return true;
 		}
 		if (args.length == 0) {
-			bp.sendMessage("§6§lTELEPORT§f Utilize: §6/tp <player>, §e/tp <player1> <player2>§f ou §c/tp <player> (x) (y) (z)");
+			bp.sendMessage(
+					"§6§lTELEPORT§f Utilize: §6/tp <player>, §e/tp <player1> <player2>§f ou §c/tp <player> (x) (y) (z)");
 			return true;
 		} else if (args.length == 1) {
 			final Player toTeleport = BattlePlayerAPI.BattlePlayer(args[0]);
@@ -64,8 +65,8 @@ public final class TeleportCommand extends Command {
 			try {
 				toTeleport.teleport(new Location(bp.getWorld(), Integer.valueOf(args[1]), Integer.valueOf(args[2]),
 						Integer.valueOf(args[3])));
-				bp.sendMessage(
-						"§6§lTELEPORTE§f Você §e§lTELEPORTOU§f o player  " + args[0] + " para §e§l" + args[1] + " §b§l" + args[2] + " §c§l" + args[3]);
+				bp.sendMessage("§6§lTELEPORTE§f Você §e§lTELEPORTOU§f o player  " + args[0] + " para §e§l" + args[1]
+						+ " §b§l" + args[2] + " §c§l" + args[3]);
 				return true;
 			} catch (Exception e) {
 				bp.sendMessage("§6§lTELEPORTE§f Utilize §4§lapenas numeros§f para §c§lindicar coordenadas§f!");

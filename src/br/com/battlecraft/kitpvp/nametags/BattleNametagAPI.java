@@ -124,7 +124,7 @@ public final class BattleNametagAPI {
 			return nullTag;
 		}
 	}
-	
+
 	public static final String getTagMINIYT(final Player bp) {
 		if (BattlePlayerAPI.BattlePlayer(bp).hasPermission("pvp.tag.miniyt")) {
 			return MINIYT;
@@ -205,7 +205,8 @@ public final class BattleNametagAPI {
 			setYTPLUS(bp);
 		} else if (args.equalsIgnoreCase("yt") || args.equalsIgnoreCase("youtuber")) {
 			setYT(bp);
-		} else if (args.equalsIgnoreCase("miniyt") || args.equalsIgnoreCase("semiyt") || args.equalsIgnoreCase("semiyoutuber")) {
+		} else if (args.equalsIgnoreCase("miniyt") || args.equalsIgnoreCase("semiyt")
+				|| args.equalsIgnoreCase("semiyoutuber")) {
 			setMINIYT(bp);
 		} else if (args.equalsIgnoreCase("ultimate")) {
 			setULTIMATE(bp);
@@ -230,8 +231,8 @@ public final class BattleNametagAPI {
 		BattlePlayerAPI.BattlePlayer(bp)
 				.sendMessage(getTagDONO(bp) + getTagDIRETOR(bp) + getTagGERENTE(bp) + getTagADMIN(bp)
 						+ getTagMODPLUS(bp) + getTagMODGC(bp) + getTagMOD(bp) + getTagTRIAL(bp) + getTagBUILDER(bp)
-						+ getTagAJUDANTE(bp) + getTagYTPLUS(bp) + getTagYT(bp) + getTagMINIYT(bp) + getTagULTIMATE(bp) + getTagBETA(bp)
-						+ getTagPREMIUM(bp) + getTagLIGHT(bp) + getTagDESIGNER(bp) + getTagNORMAL(bp));
+						+ getTagAJUDANTE(bp) + getTagYTPLUS(bp) + getTagYT(bp) + getTagMINIYT(bp) + getTagULTIMATE(bp)
+						+ getTagBETA(bp) + getTagPREMIUM(bp) + getTagLIGHT(bp) + getTagDESIGNER(bp) + getTagNORMAL(bp));
 	}
 
 	public static final void loadBattlePlayerTagFromJoin(final Player bp) {
@@ -294,7 +295,7 @@ public final class BattleNametagAPI {
 			return;
 		}
 	}
-	
+
 	public static final String getPlayerGroup(final Player bp) {
 		if (bp.hasPermission("pvp.tag.dono")) {
 			return "§4§lDONO §4";
@@ -331,7 +332,7 @@ public final class BattleNametagAPI {
 		} else if (bp.hasPermission("pvp.tag.light")) {
 			return "§a§lLIGHT §a";
 		} else if (bp.hasPermission("pvp.tag.designer")) {
-			return "§2§lDESIGNER §2"; 
+			return "§2§lDESIGNER §2";
 		} else {
 			return "§7§lMEMBRO";
 		}
@@ -449,7 +450,7 @@ public final class BattleNametagAPI {
 		setNametag(bp, "§b§lYOUTUBER §b", " " + Leagues.getBattlePlayerLeagueInChat(bp));
 		bp.sendMessage("§9§lTAGS§f Voce agora esta §3§lUTILIZANDO§f a tag §b§lYOUTUBER§f.");
 	}
-	
+
 	public static final void setMINIYT(final Player bp) {
 		if (!bp.hasPermission("pvp.tag.miniyt")) {
 			bp.sendMessage("§3§lTAGS§f Você não possui a §9§lTAG §c§lMINIYT§f.");

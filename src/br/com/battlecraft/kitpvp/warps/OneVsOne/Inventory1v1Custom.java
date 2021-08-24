@@ -27,7 +27,7 @@ public final class Inventory1v1Custom implements Listener {
 	public static final HashMap<Player, Boolean> recraft = new HashMap<>();
 	public static final HashMap<Player, Boolean> sharpness = new HashMap<>();
 	public static final HashMap<Player, Boolean> fullsoup = new HashMap<>();
-	
+
 	@SuppressWarnings("deprecation")
 	public static final void loadItensCustom(final Player bp1, final Player bp2) {
 		bp1.getInventory().clear();
@@ -40,7 +40,7 @@ public final class Inventory1v1Custom implements Listener {
 				bp1.getInventory().setChestplate(new ItemStack(Material.LEATHER_CHESTPLATE));
 				bp1.getInventory().setLeggings(new ItemStack(Material.LEATHER_LEGGINGS));
 				bp1.getInventory().setBoots(new ItemStack(Material.LEATHER_BOOTS));
-				
+
 				bp2.getInventory().setHelmet(new ItemStack(Material.LEATHER_HELMET));
 				bp2.getInventory().setChestplate(new ItemStack(Material.LEATHER_CHESTPLATE));
 				bp2.getInventory().setLeggings(new ItemStack(Material.LEATHER_LEGGINGS));
@@ -50,7 +50,7 @@ public final class Inventory1v1Custom implements Listener {
 				bp1.getInventory().setChestplate(new ItemStack(Material.IRON_CHESTPLATE));
 				bp1.getInventory().setLeggings(new ItemStack(Material.IRON_LEGGINGS));
 				bp1.getInventory().setBoots(new ItemStack(Material.IRON_BOOTS));
-				
+
 				bp2.getInventory().setHelmet(new ItemStack(Material.IRON_HELMET));
 				bp2.getInventory().setChestplate(new ItemStack(Material.IRON_CHESTPLATE));
 				bp2.getInventory().setLeggings(new ItemStack(Material.IRON_LEGGINGS));
@@ -60,7 +60,7 @@ public final class Inventory1v1Custom implements Listener {
 				bp1.getInventory().setChestplate(new ItemStack(Material.DIAMOND_CHESTPLATE));
 				bp1.getInventory().setLeggings(new ItemStack(Material.DIAMOND_LEGGINGS));
 				bp1.getInventory().setBoots(new ItemStack(Material.DIAMOND_BOOTS));
-				
+
 				bp2.getInventory().setHelmet(new ItemStack(Material.DIAMOND_HELMET));
 				bp2.getInventory().setChestplate(new ItemStack(Material.DIAMOND_CHESTPLATE));
 				bp2.getInventory().setLeggings(new ItemStack(Material.DIAMOND_LEGGINGS));
@@ -124,16 +124,16 @@ public final class Inventory1v1Custom implements Listener {
 					bp1.getInventory().setItem(13, new ItemStack(Material.BOWL, 64, (byte) 0));
 					bp1.getInventory().setItem(14, new ItemStack(Material.RED_MUSHROOM, 64, (byte) 0));
 					bp1.getInventory().setItem(15, new ItemStack(Material.BROWN_MUSHROOM, 64, (byte) 0));
-					
+
 					bp2.getInventory().setItem(13, new ItemStack(Material.BOWL, 64, (byte) 0));
 					bp2.getInventory().setItem(14, new ItemStack(Material.RED_MUSHROOM, 64, (byte) 0));
 					bp2.getInventory().setItem(15, new ItemStack(Material.BROWN_MUSHROOM, 64, (byte) 0));
 				} else if (recrafttype.get(bp1) == "COCOABEAN") {
-					
+
 					bp1.getInventory().setItem(13, new ItemStack(Material.BOWL, 64, (byte) 0));
 					bp1.getInventory().setItem(14, new ItemStack(Material.getMaterial(351), 64, (byte) 3));
 					bp1.getInventory().setItem(15, new ItemStack(Material.getMaterial(351), 64, (byte) 3));
-					
+
 					bp2.getInventory().setItem(13, new ItemStack(Material.BOWL, 64, (byte) 0));
 					bp2.getInventory().setItem(14, new ItemStack(Material.getMaterial(351), 64, (byte) 3));
 					bp2.getInventory().setItem(15, new ItemStack(Material.getMaterial(351), 64, (byte) 3));
@@ -164,7 +164,7 @@ public final class Inventory1v1Custom implements Listener {
 			fullsoup.remove(bp);
 		}
 	}
-	
+
 	public static final ItemStack espadaDiamante(final boolean enchanted) {
 		final ItemStack i = new ItemStack(Material.DIAMOND_SWORD);
 		final ItemMeta ik = i.getItemMeta();
@@ -174,7 +174,7 @@ public final class Inventory1v1Custom implements Listener {
 		i.setItemMeta(ik);
 		return i;
 	}
-	
+
 	public static final ItemStack espadaFerro(final boolean enchanted) {
 		final ItemStack i = new ItemStack(Material.IRON_SWORD);
 		final ItemMeta ik = i.getItemMeta();
@@ -184,7 +184,7 @@ public final class Inventory1v1Custom implements Listener {
 		i.setItemMeta(ik);
 		return i;
 	}
-	
+
 	public static final ItemStack espadaPedra(final boolean enchanted) {
 		final ItemStack i = new ItemStack(Material.STONE_SWORD);
 		final ItemMeta ik = i.getItemMeta();
@@ -194,7 +194,7 @@ public final class Inventory1v1Custom implements Listener {
 		i.setItemMeta(ik);
 		return i;
 	}
-	
+
 	public static final ItemStack espadaMadeira(final boolean enchanted) {
 		final ItemStack i = new ItemStack(Material.WOOD_SWORD);
 		final ItemMeta ik = i.getItemMeta();
@@ -222,11 +222,11 @@ public final class Inventory1v1Custom implements Listener {
 		for (int i = 0; i < 54; i++) {
 			custom.setItem(i, SpawnItens.newItem(Material.STAINED_GLASS_PANE, "§b§l-", 1, (byte) 8));
 		}
-		
+
 		custom.setItem(43, SpawnItens.newItem(Material.WOOL, "§a§lDesafiar Jogador", 1, (byte) 5));
-		custom.setItem(44,SpawnItens.newItem(Material.WOOL, "§a§lDesafiar Jogador", 1, (byte) 5));
+		custom.setItem(44, SpawnItens.newItem(Material.WOOL, "§a§lDesafiar Jogador", 1, (byte) 5));
 		custom.setItem(52, SpawnItens.newItem(Material.WOOL, "§a§lDesafiar Jogador", 1, (byte) 5));
-		custom.setItem(53,SpawnItens.newItem(Material.WOOL, "§a§lDesafiar Jogador", 1, (byte) 5));
+		custom.setItem(53, SpawnItens.newItem(Material.WOOL, "§a§lDesafiar Jogador", 1, (byte) 5));
 
 		if (espada.containsKey(bp)) {
 			if (espada.get(bp) == Material.WOOD_SWORD) {
@@ -477,9 +477,9 @@ public final class Inventory1v1Custom implements Listener {
 						bp.sendMessage(BattleStrings.getBattlePlayerIsNotOnlineMessage());
 						return;
 					}
-					bp.sendMessage(
-							"§7Você enviou um desafio de 1v1 customizado para §b" + playername.get(bp));
-					Bukkit.getPlayer(playername.get(bp)).sendMessage("§eVocê recebeu desafio de 1v1 customizado de §7" + bp.getName());
+					bp.sendMessage("§7Você enviou um desafio de 1v1 customizado para §b" + playername.get(bp));
+					Bukkit.getPlayer(playername.get(bp))
+							.sendMessage("§eVocê recebeu desafio de 1v1 customizado de §7" + bp.getName());
 					X1WarpListener.cooldown.add(bp);
 					X1WarpListener.challengec.put(bp, Bukkit.getPlayer(playername.get(bp)));
 					Bukkit.getScheduler().runTaskLater(BukkitMain.getPlugin(), new Runnable() {

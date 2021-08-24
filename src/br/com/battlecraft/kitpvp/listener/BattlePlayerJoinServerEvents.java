@@ -71,7 +71,7 @@ public final class BattlePlayerJoinServerEvents implements Listener {
 			AccountFile.saveAccountsFile();
 		}
 	}
-	
+
 	@EventHandler
 	public final void onPlayerJoinEvent(final PlayerJoinEvent e) {
 		if (!hasHologram) {
@@ -94,7 +94,8 @@ public final class BattlePlayerJoinServerEvents implements Listener {
 		}
 
 		KitAPI.setKit(battleplayer, "Nenhum");
-		AccountFile.getAccountsFile().set(AccountConstructor.Prefix + battleplayer.getName().toLowerCase() + ".LastLogin",
+		AccountFile.getAccountsFile().set(
+				AccountConstructor.Prefix + battleplayer.getName().toLowerCase() + ".LastLogin",
 				AccountConstructor.BrasilHour());
 		AccountFile.saveAccountsFile();
 		battleplayer.setGameMode(GameMode.SURVIVAL);

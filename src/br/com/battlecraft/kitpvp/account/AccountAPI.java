@@ -22,37 +22,37 @@ public final class AccountAPI {
 				bpstatus + money);
 		AccountFile.saveAccountsFile();
 	}
-	
+
 	public static final void addBattlePlayerDoubleXp(final Player bp, final int doublexp) {
-		int bpstatus = AccountFile.getAccountsFile()
-				.getInt(AccountConstructor.Prefix + BattlePlayerAPI.getBattlePlayerName(bp).toLowerCase() + ".DoubleXp");
+		int bpstatus = AccountFile.getAccountsFile().getInt(
+				AccountConstructor.Prefix + BattlePlayerAPI.getBattlePlayerName(bp).toLowerCase() + ".DoubleXp");
 		AccountFile.getAccountsFile().set(
 				AccountConstructor.Prefix + BattlePlayerAPI.getBattlePlayerName(bp).toLowerCase() + ".DoubleXp",
 				bpstatus + doublexp);
 		AccountFile.saveAccountsFile();
 	}
-	
+
 	public static final void addBattlePlayerDoubleXp(final OfflinePlayer bp, final int doublexp) {
-		int bpstatus = AccountFile.getAccountsFile()
-				.getInt(AccountConstructor.Prefix + BattlePlayerAPI.getBattlePlayerName(bp).toLowerCase() + ".DoubleXp");
+		int bpstatus = AccountFile.getAccountsFile().getInt(
+				AccountConstructor.Prefix + BattlePlayerAPI.getBattlePlayerName(bp).toLowerCase() + ".DoubleXp");
 		AccountFile.getAccountsFile().set(
 				AccountConstructor.Prefix + BattlePlayerAPI.getBattlePlayerName(bp).toLowerCase() + ".DoubleXp",
 				bpstatus + doublexp);
 		AccountFile.saveAccountsFile();
 	}
-	
+
 	public static final void removeBattlePlayerDoubleXp(final Player bp, final int doublexp) {
-		int bpstatus = AccountFile.getAccountsFile()
-				.getInt(AccountConstructor.Prefix + BattlePlayerAPI.getBattlePlayerName(bp).toLowerCase() + ".DoubleXp");
+		int bpstatus = AccountFile.getAccountsFile().getInt(
+				AccountConstructor.Prefix + BattlePlayerAPI.getBattlePlayerName(bp).toLowerCase() + ".DoubleXp");
 		AccountFile.getAccountsFile().set(
 				AccountConstructor.Prefix + BattlePlayerAPI.getBattlePlayerName(bp).toLowerCase() + ".DoubleXp",
 				bpstatus - doublexp);
 		AccountFile.saveAccountsFile();
 	}
-	
+
 	public static final void removeBattlePlayerDoubleXp(final OfflinePlayer bp, final int doublexp) {
-		int bpstatus = AccountFile.getAccountsFile()
-				.getInt(AccountConstructor.Prefix + BattlePlayerAPI.getBattlePlayerName(bp).toLowerCase() + ".DoubleXp");
+		int bpstatus = AccountFile.getAccountsFile().getInt(
+				AccountConstructor.Prefix + BattlePlayerAPI.getBattlePlayerName(bp).toLowerCase() + ".DoubleXp");
 		AccountFile.getAccountsFile().set(
 				AccountConstructor.Prefix + BattlePlayerAPI.getBattlePlayerName(bp).toLowerCase() + ".DoubleXp",
 				bpstatus - doublexp);
@@ -68,20 +68,20 @@ public final class AccountAPI {
 		KsAPI.addKillStreak(bp, streak);
 		AccountFile.saveAccountsFile();
 	}
-	
+
 	public static final void addBattlePlayerKills(final Player bp, final int kills) {
-		int bpstatus = AccountFile.getAccountsFile().getInt(
-				AccountConstructor.Prefix + BattlePlayerAPI.getBattlePlayerName(bp).toLowerCase() + ".Kills");
+		int bpstatus = AccountFile.getAccountsFile()
+				.getInt(AccountConstructor.Prefix + BattlePlayerAPI.getBattlePlayerName(bp).toLowerCase() + ".Kills");
 		AccountFile.getAccountsFile().set(
 				AccountConstructor.Prefix + BattlePlayerAPI.getBattlePlayerName(bp).toLowerCase() + ".Kills",
 				bpstatus + kills);
 		KillsAPI.addKills(bp, kills);
 		AccountFile.saveAccountsFile();
 	}
-	
+
 	public static final void addBattlePlayerDeath(final Player bp, final int deaths) {
-		int bpstatus = AccountFile.getAccountsFile().getInt(
-				AccountConstructor.Prefix + BattlePlayerAPI.getBattlePlayerName(bp).toLowerCase() + ".Deaths");
+		int bpstatus = AccountFile.getAccountsFile()
+				.getInt(AccountConstructor.Prefix + BattlePlayerAPI.getBattlePlayerName(bp).toLowerCase() + ".Deaths");
 		AccountFile.getAccountsFile().set(
 				AccountConstructor.Prefix + BattlePlayerAPI.getBattlePlayerName(bp).toLowerCase() + ".Deaths",
 				bpstatus + deaths);
@@ -176,7 +176,7 @@ public final class AccountAPI {
 		KsAPI.removeKillStreak(bp);
 		AccountFile.saveAccountsFile();
 	}
-	
+
 	public static final void removeBattlePlayerKillStreak(final Player bp) {
 		AccountFile.getAccountsFile().set(
 				AccountConstructor.Prefix + BattlePlayerAPI.getBattlePlayerName(bp).toLowerCase() + ".KillStreak", 0);
@@ -202,7 +202,7 @@ public final class AccountAPI {
 		XpAPI.removeXp(bp, xp);
 		AccountFile.saveAccountsFile();
 	}
-	
+
 	public static final void removeBattlePlayerKills(final Player bp, final int kills) {
 		int bpstatus = AccountFile.getAccountsFile()
 				.getInt(AccountConstructor.Prefix + BattlePlayerAPI.getBattlePlayerName(bp).toLowerCase() + ".Kills");
@@ -294,15 +294,15 @@ public final class AccountAPI {
 		return AccountFile.getAccountsFile()
 				.getInt(AccountConstructor.Prefix + BattlePlayerAPI.getBattlePlayerName(bp).toLowerCase() + ".Xp");
 	}
-	
+
 	public static final int getBattlePlayerDoubleXp(final Player bp) {
-		return AccountFile.getAccountsFile()
-				.getInt(AccountConstructor.Prefix + BattlePlayerAPI.getBattlePlayerName(bp).toLowerCase() + ".DoubleXp");
+		return AccountFile.getAccountsFile().getInt(
+				AccountConstructor.Prefix + BattlePlayerAPI.getBattlePlayerName(bp).toLowerCase() + ".DoubleXp");
 	}
-	
+
 	public static final int getBattlePlayerDoubleXp(final OfflinePlayer bp) {
-		return AccountFile.getAccountsFile()
-				.getInt(AccountConstructor.Prefix + BattlePlayerAPI.getBattlePlayerName(bp).toLowerCase() + ".DoubleXp");
+		return AccountFile.getAccountsFile().getInt(
+				AccountConstructor.Prefix + BattlePlayerAPI.getBattlePlayerName(bp).toLowerCase() + ".DoubleXp");
 	}
 
 	public static final int getBattlePlayerCash(final Player bp) {
@@ -334,7 +334,7 @@ public final class AccountAPI {
 		return AccountFile.getAccountsFile().getString(
 				AccountConstructor.Prefix + BattlePlayerAPI.getBattlePlayerName(bp).toLowerCase() + ".LastLogin");
 	}
-	
+
 	public static final String getBattlePlayerUuid(final Player bp) {
 		return AccountFile.getAccountsFile().getString(
 				AccountConstructor.Prefix + BattlePlayerAPI.getBattlePlayerName(bp).toLowerCase() + ".UniqueID");

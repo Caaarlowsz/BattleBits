@@ -29,7 +29,7 @@ public final class Minato implements Listener {
 		bp.sendMessage("§3§lKIT§f Você selecionou o kit §b§lMinato");
 		TittleAPI.sendTittle(bp, "§bKit Minato");
 		TittleAPI.sendSubTittle(bp, "§fescolhido com sucesso!");
-		bp.playSound(bp.getLocation(), Sound.LEVEL_UP,  2.0F, 1.0F);
+		bp.playSound(bp.getLocation(), Sound.LEVEL_UP, 2.0F, 1.0F);
 	}
 
 	@SuppressWarnings("deprecation")

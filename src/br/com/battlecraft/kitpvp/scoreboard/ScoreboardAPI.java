@@ -8,27 +8,27 @@ import org.bukkit.scoreboard.Scoreboard;
 import org.bukkit.scoreboard.Team;
 
 public final class ScoreboardAPI {
-	
+
 	private Scoreboard score;
 	private Objective obj;
-	
+
 	public ScoreboardAPI(final Player bp, final String name) {
 		score = Bukkit.getScoreboardManager().getNewScoreboard();
 		obj = score.registerNewObjective("score", "dummy");
-		
+
 		obj.setDisplaySlot(DisplaySlot.SIDEBAR);
 		obj.setDisplayName(name);
-		
+
 		for (int t = 1; t < 16; t++) {
 			@SuppressWarnings("unused")
 			Team team = score.registerNewTeam("line-" + t);
 		}
 	}
-	
+
 	public Scoreboard getSoreboard() {
 		return score;
 	}
-	
+
 	public static final String convertOff(final int line) {
 		if (line == 1) {
 			return "§1";
@@ -77,14 +77,14 @@ public final class ScoreboardAPI {
 		}
 		return "§0";
 	}
-	
+
 	@SuppressWarnings("deprecation")
 	public final void add(String prefix, String suffix, final int line) {
 		Team t = score.getTeam("line-" + line);
 		final FakeOfflinePlayer of = new FakeOfflinePlayer(convertOff(line));
 		obj.getScore(of).setScore(line);
 		t.addPlayer(of);
-		
+
 		if (prefix.length() > 16) {
 			prefix = prefix.substring(0, 16);
 		}
@@ -94,7 +94,7 @@ public final class ScoreboardAPI {
 		t.setPrefix(prefix);
 		t.setSuffix(suffix);
 	}
-	
+
 	public final void updateLine(String prefix, String suffix, final int line) {
 		Team t = score.getTeam("line-" + line);
 		if (prefix.length() > 16) {

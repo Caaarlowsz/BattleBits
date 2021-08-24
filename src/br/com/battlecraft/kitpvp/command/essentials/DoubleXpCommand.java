@@ -47,5 +47,4 @@ public final class DoubleXpCommand extends Command {
 		return false;
 	}
 
-	
 }

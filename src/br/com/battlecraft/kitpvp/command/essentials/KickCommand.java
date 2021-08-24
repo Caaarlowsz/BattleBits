@@ -41,7 +41,8 @@ public final class KickCommand extends Command {
 			}
 			kicked.kickPlayer("§fVocê foi §c§lKICKADO§f do servidor! \n \n " + "§c§lAutor:§f " + sender.getName() + "\n"
 					+ "§c§lMotivo:§f " + motive + " \n \n §fAtenciosamente");
-			Bukkit.getServer().broadcastMessage("§f" + kicked.getName() + " foi §c§lKICKADO§f do servidor pelo motivo:§c " + motive);
+			Bukkit.getServer().broadcastMessage(
+					"§f" + kicked.getName() + " foi §c§lKICKADO§f do servidor pelo motivo:§c " + motive);
 			sender.sendMessage("§c§lKICK§f Você §a§lkickou§f o player " + args[0]);
 			return true;
 		}

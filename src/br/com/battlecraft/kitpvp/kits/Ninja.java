@@ -30,7 +30,7 @@ public final class Ninja implements Listener {
 		bp.sendMessage("§3§lKIT§f Você selecionou o kit §b§lNinja");
 		TittleAPI.sendTittle(bp, "§bKit Ninja");
 		TittleAPI.sendSubTittle(bp, "§fescolhido com sucesso!");
-		bp.playSound(bp.getLocation(), Sound.LEVEL_UP,  2.0F, 1.0F);
+		bp.playSound(bp.getLocation(), Sound.LEVEL_UP, 2.0F, 1.0F);
 	}
 
 	@EventHandler

@@ -18,7 +18,7 @@ import br.com.battlecraft.kitpvp.warps.Spawn.SpawnItens;
 import br.com.battlecraft.kitpvp.warps.Spawn.SpawnWarpListener;
 
 public final class Monk implements Listener {
-	
+
 	public static final void setMonkKit(final Player bp) {
 		PvP.defaultItens(bp);
 		KitAPI.setKit(bp, "Monk");
@@ -27,7 +27,7 @@ public final class Monk implements Listener {
 		bp.sendMessage("§3§lKIT§f Você selecionou o kit §b§lMonk");
 		TittleAPI.sendTittle(bp, "§bKit Monk");
 		TittleAPI.sendSubTittle(bp, "§fescolhido com sucesso!");
-		bp.playSound(bp.getLocation(), Sound.LEVEL_UP,  2.0F, 1.0F);
+		bp.playSound(bp.getLocation(), Sound.LEVEL_UP, 2.0F, 1.0F);
 	}
 
 	@EventHandler(priority = EventPriority.MONITOR)

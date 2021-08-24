@@ -30,7 +30,7 @@ import net.minecraft.util.gnu.trove.map.TIntObjectMap;
 import net.minecraft.util.io.netty.util.internal.ConcurrentSet;
 
 public class Hologram {
-	
+
 	/**
 	 * 
 	 */

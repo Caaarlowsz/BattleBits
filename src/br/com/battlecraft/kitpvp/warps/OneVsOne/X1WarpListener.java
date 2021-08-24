@@ -33,7 +33,7 @@ import br.com.battlecraft.kitpvp.warps.Fps.FpsWarpListener;
 import br.com.battlecraft.kitpvp.warps.Spawn.SpawnWarpListener;
 
 public final class X1WarpListener implements Listener {
-	
+
 	@SuppressWarnings("deprecation")
 	public static ItemStack searchingItem() {
 		ItemStack i = new ItemStack(351, 1, (byte) 10);
@@ -42,7 +42,7 @@ public final class X1WarpListener implements Listener {
 		i.setItemMeta(ik);
 		return i;
 	}
-	
+
 	public static ItemStack customItem() {
 		ItemStack i = new ItemStack(Material.IRON_FENCE, 1, (byte) 0);
 		ItemMeta ik = i.getItemMeta();
@@ -61,7 +61,7 @@ public final class X1WarpListener implements Listener {
 	}
 
 	public static final HashMap<Player, String> batalhando = new HashMap<>();
-	
+
 	public static boolean wait = false;
 
 	@SuppressWarnings("deprecation")
@@ -87,10 +87,12 @@ public final class X1WarpListener implements Listener {
 					playerfigh.put(findToChallenge, e.getPlayer().getName());
 					batalhando.put(e.getPlayer(), findToChallenge.getName());
 					batalhando.put(findToChallenge, e.getPlayer().getName());
-					e.getPlayer().sendMessage(
-							"§9O 1v1 Rápido encontrou alguém para você lutar! O player escolhido foi §e" + findToChallenge.getName());
+					e.getPlayer()
+							.sendMessage("§9O 1v1 Rápido encontrou alguém para você lutar! O player escolhido foi §e"
+									+ findToChallenge.getName());
 					findToChallenge
-							.sendMessage("§9O 1v1 Rápido encontrou alguém para você lutar! O player escolhido foi §e" + e.getPlayer().getName());
+							.sendMessage("§9O 1v1 Rápido encontrou alguém para você lutar! O player escolhido foi §e"
+									+ e.getPlayer().getName());
 					firstMatch = null;
 					secondMatch = null;
 				}
@@ -111,7 +113,8 @@ public final class X1WarpListener implements Listener {
 		}
 		final Player challenged = (Player) e.getRightClicked();
 		final ItemStack i = e.getPlayer().getItemInHand();
-		if (WarpsAPI.inOnevsOne.contains(e.getPlayer().getName()) && WarpsAPI.inOnevsOne.contains(challenged.getName())) {
+		if (WarpsAPI.inOnevsOne.contains(e.getPlayer().getName())
+				&& WarpsAPI.inOnevsOne.contains(challenged.getName())) {
 			if (e.getPlayer().getItemInHand().getType() == Material.BLAZE_ROD) {
 				if (i.getItemMeta().getDisplayName().equals("§6§l1v1 Normal")) {
 					if (cooldown.contains(e.getPlayer())) {
@@ -132,10 +135,8 @@ public final class X1WarpListener implements Listener {
 						playerfigh.put(challenged, e.getPlayer().getName());
 						batalhando.put(challenged, e.getPlayer().getName());
 						batalhando.put(e.getPlayer(), challenged.getName());
-						challenged
-								.sendMessage("§b" + e.getPlayer().getName() + "§2 aceitou seu desafio");
-						e.getPlayer()
-								.sendMessage("§2Voce aceitou o desafio de §b" + challenged.getName());
+						challenged.sendMessage("§b" + e.getPlayer().getName() + "§2 aceitou seu desafio");
+						e.getPlayer().sendMessage("§2Voce aceitou o desafio de §b" + challenged.getName());
 						challenge.remove(challenged);
 						if (challenge.containsKey(e.getPlayer())) {
 							challenge.remove(e.getPlayer());
@@ -145,8 +146,7 @@ public final class X1WarpListener implements Listener {
 					if (playerfigh.containsKey(challenged)) {
 						return;
 					}
-					e.getPlayer().sendMessage(
-							"§7Você enviou um desafio de 1v1 normal para §b" + challenged.getName());
+					e.getPlayer().sendMessage("§7Você enviou um desafio de 1v1 normal para §b" + challenged.getName());
 					challenged.sendMessage("§eVocê recebeu desafio de 1v1 normal de §7" + e.getPlayer().getName());
 					cooldown.add(e.getPlayer());
 					challenge.put(e.getPlayer(), challenged);
@@ -183,10 +183,8 @@ public final class X1WarpListener implements Listener {
 						playerfigh.put(challenged, e.getPlayer().getName());
 						batalhando.put(challenged, e.getPlayer().getName());
 						batalhando.put(e.getPlayer(), challenged.getName());
-						challenged
-								.sendMessage("§b" + e.getPlayer().getName() + "§2 aceitou seu desafio");
-						e.getPlayer()
-								.sendMessage("§2Voce aceitou o desafio de §b" + challenged.getName());
+						challenged.sendMessage("§b" + e.getPlayer().getName() + "§2 aceitou seu desafio");
+						e.getPlayer().sendMessage("§2Voce aceitou o desafio de §b" + challenged.getName());
 						challengec.remove(challenged);
 						if (challengec.containsKey(e.getPlayer())) {
 							challengec.remove(e.getPlayer());
@@ -226,7 +224,8 @@ public final class X1WarpListener implements Listener {
 
 	public static String cora(Player p) {
 		Damageable vida = p;
-		return NumberFormat.getCurrencyInstance().format(vida.getHealth() / 2).replace("$", "").replace("R", "").replace(",", ".");
+		return NumberFormat.getCurrencyInstance().format(vida.getHealth() / 2).replace("$", "").replace("R", "")
+				.replace(",", ".");
 	}
 
 	@SuppressWarnings("deprecation")
@@ -279,24 +278,24 @@ public final class X1WarpListener implements Listener {
 			}
 		}
 	}
-	
+
 	public static UUID firstMatch;
 	public static UUID secondMatch;
 	public static UUID thirdMatch;
-	
-	public static final ArrayList<Player> cooldown = new ArrayList<>();	
+
+	public static final ArrayList<Player> cooldown = new ArrayList<>();
 	public static final HashMap<Player, Player> challenge = new HashMap<>();
-	
+
 	public static final HashMap<Player, Player> challengec = new HashMap<>();
-	
+
 	public static final ArrayList<Player> fighting = new ArrayList<>();
 	public static final HashMap<Player, String> playerfigh = new HashMap<>();
-	
+
 	public static ItemStack newItem(Material material, int qnt, byte color) {
 		ItemStack i = new ItemStack(material, qnt, (byte) color);
 		return i;
 	}
-	
+
 	public static ItemStack newItem(Material material, String name, int qnt, byte color) {
 		ItemStack i = new ItemStack(material, qnt, (byte) color);
 		ItemMeta ik = i.getItemMeta();
@@ -304,7 +303,7 @@ public final class X1WarpListener implements Listener {
 		i.setItemMeta(ik);
 		return i;
 	}
-	
+
 	public static ItemStack newItemEnchant(Material material, Enchantment ench, int qnt, byte color) {
 		ItemStack i = new ItemStack(material, qnt, (byte) color);
 		ItemMeta ik = i.getItemMeta();
@@ -312,7 +311,7 @@ public final class X1WarpListener implements Listener {
 		i.setItemMeta(ik);
 		return i;
 	}
-	
+
 	public static void prepareInventory(Player p) {
 		p.getInventory().clear();
 		p.getInventory().setArmorContents(null);
@@ -326,7 +325,7 @@ public final class X1WarpListener implements Listener {
 		}
 		p.updateInventory();
 	}
-	
+
 	public static final void loadWarp1v1Methods(final Player bp) {
 		if (FpsWarpListener.onFpsSpawnProtection.contains(bp)) {
 			FpsWarpListener.onFpsSpawnProtection.remove(bp);
@@ -339,7 +338,7 @@ public final class X1WarpListener implements Listener {
 		WarpsAPI.battlePlayerWarp.put(bp, WarpsAPI.Warps.ONEVSONE);
 		Score.createScore1v1(bp);
 	}
-	
+
 	public static void defaultItens(Player p) {
 		p.getInventory().clear();
 		p.getInventory().setArmorContents(null);
@@ -348,7 +347,7 @@ public final class X1WarpListener implements Listener {
 		p.getInventory().setItem(5, backItem());
 		p.updateInventory();
 	}
-	
+
 	@SuppressWarnings("deprecation")
 	public static void teleportToFight(Player p1, Player p2) {
 		LocationsConstructor.teleportToBattleWarpLocation(p1, "1v1loc1");
@@ -364,7 +363,7 @@ public final class X1WarpListener implements Listener {
 			p2.showPlayer(p1);
 		}
 	}
-	
+
 	@SuppressWarnings("deprecation")
 	public static void teleportToCustomFight(Player p1, Player p2) {
 		LocationsConstructor.teleportToBattleWarpLocation(p1, "1v1loc1");

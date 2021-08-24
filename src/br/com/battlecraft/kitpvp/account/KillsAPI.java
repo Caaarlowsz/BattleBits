@@ -11,7 +11,7 @@ import org.bukkit.entity.Player;
 import br.com.battlecraft.kitpvp.BukkitMain;
 
 public class KillsAPI {
-	
+
 	/**
 	 * API old (remade v1)
 	 */
@@ -54,7 +54,7 @@ public class KillsAPI {
 		Kills.set(p.getName(), getKills(p) - Qntd);
 		saveKills();
 	}
-	
+
 	public static int getKills(OfflinePlayer p) {
 		return (int) Kills.getInt(p.getName());
 	}

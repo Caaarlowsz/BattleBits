@@ -13,7 +13,7 @@ import br.com.battlecraft.kitpvp.BukkitMain;
 import br.com.battlecraft.kitpvp.warps.WarpsAPI;
 
 public final class CapirotoItens {
-	
+
 	public static final ItemStack capaceteP4() {
 		final ItemStack i = new ItemStack(Material.DIAMOND_HELMET);
 		final ItemMeta ik = i.getItemMeta();
@@ -22,7 +22,7 @@ public final class CapirotoItens {
 		i.setItemMeta(ik);
 		return i;
 	}
-	
+
 	public static final ItemStack peitoralP4() {
 		final ItemStack i = new ItemStack(Material.DIAMOND_CHESTPLATE);
 		final ItemMeta ik = i.getItemMeta();
@@ -31,7 +31,7 @@ public final class CapirotoItens {
 		i.setItemMeta(ik);
 		return i;
 	}
-	
+
 	public static final ItemStack calçaP4() {
 		final ItemStack i = new ItemStack(Material.DIAMOND_LEGGINGS);
 		final ItemMeta ik = i.getItemMeta();
@@ -40,7 +40,7 @@ public final class CapirotoItens {
 		i.setItemMeta(ik);
 		return i;
 	}
-	
+
 	public static final ItemStack botasP4() {
 		final ItemStack i = new ItemStack(Material.DIAMOND_BOOTS);
 		final ItemMeta ik = i.getItemMeta();
@@ -49,7 +49,7 @@ public final class CapirotoItens {
 		i.setItemMeta(ik);
 		return i;
 	}
-	
+
 	public static final ItemStack espada() {
 		final ItemStack i = new ItemStack(Material.DIAMOND_SWORD);
 		final ItemMeta ik = i.getItemMeta();
@@ -59,7 +59,7 @@ public final class CapirotoItens {
 		i.setItemMeta(ik);
 		return i;
 	}
-	
+
 	public static final ItemStack arco() {
 		final ItemStack i = new ItemStack(Material.BOW);
 		final ItemMeta ik = i.getItemMeta();
@@ -70,7 +70,7 @@ public final class CapirotoItens {
 		i.setItemMeta(ik);
 		return i;
 	}
-	
+
 	public static final void updatePotionEffects() {
 		Bukkit.getScheduler().scheduleSyncRepeatingTask(BukkitMain.getPlugin(), new Runnable() {
 			@SuppressWarnings("deprecation")
@@ -82,7 +82,7 @@ public final class CapirotoItens {
 						all.addPotionEffect(new PotionEffect(PotionEffectType.FIRE_RESISTANCE, 10000, 2));
 					}
 				}
-			}			
+			}
 		}, 0, 15L);
 	}
 
@@ -93,11 +93,11 @@ public final class CapirotoItens {
 		bp.getInventory().setChestplate(peitoralP4());
 		bp.getInventory().setLeggings(calçaP4());
 		bp.getInventory().setBoots(botasP4());
-		
+
 		bp.getInventory().setItem(0, espada());
 		bp.getInventory().setItem(1, new ItemStack(Material.GOLDEN_APPLE, 10, (byte) 1));
 		bp.getInventory().setItem(2, arco());
-		
+
 		bp.getInventory().setItem(9, capaceteP4());
 		bp.getInventory().setItem(10, peitoralP4());
 		bp.getInventory().setItem(11, calçaP4());

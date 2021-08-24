@@ -28,7 +28,7 @@ public final class VanishSystem {
 		i.setItemMeta(ik);
 		return i;
 	}
-	
+
 	public static final ItemStack knock() {
 		final ItemStack i = new ItemStack(Material.STICK);
 		final ItemMeta ik = i.getItemMeta();
@@ -40,12 +40,13 @@ public final class VanishSystem {
 
 	@SuppressWarnings("deprecation")
 	public static final void setVanishItemsToPlayer(final Player bp) {
-		
+
 		bp.getInventory().setItem(0, SpawnItens.newItem(Material.BEDROCK, "§c§lHack Cage", 1, (byte) 0));
 		bp.getInventory().setItem(2, knock());
 		bp.getInventory().setItem(4, SpawnItens.newItem(Material.getMaterial(351), "§a§lFast Admin", 1, (byte) 10));
 		bp.getInventory().setItem(6, SpawnItens.newItem(Material.MUSHROOM_SOUP, "§b§lTestar Auto-Soup", 1, (byte) 0));
-		bp.getInventory().setItem(8, SpawnItens.newItem(Material.IRON_FENCE, "§3§lPuxar para Screenshare", 1, (byte) 0));
+		bp.getInventory().setItem(8,
+				SpawnItens.newItem(Material.IRON_FENCE, "§3§lPuxar para Screenshare", 1, (byte) 0));
 		bp.updateInventory();
 	}
 

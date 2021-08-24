@@ -16,7 +16,7 @@ import br.com.battlecraft.kitpvp.api.TittleAPI;
 import br.com.battlecraft.kitpvp.warps.Spawn.SpawnItens;
 
 public final class Fisherman implements Listener {
-	
+
 	public static final void setFishermanKit(final Player bp) {
 		PvP.defaultItens(bp);
 		KitAPI.setKit(bp, "Fisherman");
@@ -25,15 +25,15 @@ public final class Fisherman implements Listener {
 		bp.sendMessage("§3§lKIT§f Você selecionou o kit §b§lFisherman");
 		TittleAPI.sendTittle(bp, "§bKit Fisherman");
 		TittleAPI.sendSubTittle(bp, "§fescolhido com sucesso!");
-		bp.playSound(bp.getLocation(), Sound.LEVEL_UP,  2.0F, 1.0F);
+		bp.playSound(bp.getLocation(), Sound.LEVEL_UP, 2.0F, 1.0F);
 	}
 
 	@EventHandler(priority = EventPriority.MONITOR)
-	  public final void onPlayerFishEvent(final PlayerFishEvent e) {
-	    final Player p = e.getPlayer();
-	    final Entity caught = e.getCaught();
-	    final Block block = e.getHook().getLocation().getBlock();
-	    if ((caught != null) && (caught != block) &&  (KitAPI.getKit(p) == "Fisherman"))
-	      caught.teleport(p.getPlayer().getLocation());
-	  }
+	public final void onPlayerFishEvent(final PlayerFishEvent e) {
+		final Player p = e.getPlayer();
+		final Entity caught = e.getCaught();
+		final Block block = e.getHook().getLocation().getBlock();
+		if ((caught != null) && (caught != block) && (KitAPI.getKit(p) == "Fisherman"))
+			caught.teleport(p.getPlayer().getLocation());
+	}
 }

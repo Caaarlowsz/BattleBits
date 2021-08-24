@@ -76,7 +76,8 @@ public final class BattlePlayerQuitEvent implements Listener {
 			staffer.sendMessage("§c§lSCREENSHARE§f O player §e§l" + bp.getName() + "§f deslogou!");
 			for (Player all : Bukkit.getOnlinePlayers()) {
 				if (all.hasPermission("pvp.cmd.ss")) {
-					all.sendMessage("§c§lSCREENSHARE§f O player §e§l" + bp.getName() + "§f deslogou em §c§lscreenshare§f!");
+					all.sendMessage(
+							"§c§lSCREENSHARE§f O player §e§l" + bp.getName() + "§f deslogou em §c§lscreenshare§f!");
 				}
 			}
 			new WarpsAPI(staffer, "Spawn");

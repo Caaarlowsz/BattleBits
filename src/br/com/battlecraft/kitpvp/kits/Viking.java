@@ -11,11 +11,11 @@ import br.com.battlecraft.kitpvp.api.KitAPI;
 import br.com.battlecraft.kitpvp.api.TittleAPI;
 
 public final class Viking {
-	
+
 	public static final ItemStack VikingAxe() {
 		final ItemStack i = new ItemStack(Material.DIAMOND_AXE);
 		final ItemMeta ik = i.getItemMeta();
-		
+
 		ik.setDisplayName("§b§lViking");
 		ik.addEnchant(Enchantment.DAMAGE_ALL, 3, true);
 		i.setItemMeta(ik);
@@ -29,6 +29,6 @@ public final class Viking {
 		bp.sendMessage("§3§lKIT§f Você selecionou o kit §b§lViking");
 		TittleAPI.sendTittle(bp, "§bKit Viking");
 		TittleAPI.sendSubTittle(bp, "§fescolhido com sucesso!");
-		bp.playSound(bp.getLocation(), Sound.LEVEL_UP,  2.0F, 1.0F);
+		bp.playSound(bp.getLocation(), Sound.LEVEL_UP, 2.0F, 1.0F);
 	}
 }

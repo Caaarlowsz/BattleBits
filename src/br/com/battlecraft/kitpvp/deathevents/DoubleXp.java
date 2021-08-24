@@ -11,7 +11,7 @@ import br.com.battlecraft.kitpvp.account.AccountAPI;
 public final class DoubleXp {
 
 	public static final ArrayList<String> hasDoubleXp = new ArrayList<>();
-	
+
 	public static final void addPlayerDoubleXp(final Player bp) {
 		if (AccountAPI.getBattlePlayerDoubleXp(bp) <= 0) {
 			bp.sendMessage("§3§lDOUBLEXP§f Voce não §c§lPOSSUI NENHUM§3§l DOUBLEXP§f!");
@@ -30,7 +30,8 @@ public final class DoubleXp {
 				if (hasDoubleXp.contains(bp.getName())) {
 					hasDoubleXp.remove(bp.getName());
 					if (bp.isOnline()) {
-						bp.sendMessage("§3§lDOUBLEXP§f Seu tempo de §3§ldoublexp§f se §c§lESGOTOU§f! Use outro para ativar novamente.");
+						bp.sendMessage(
+								"§3§lDOUBLEXP§f Seu tempo de §3§ldoublexp§f se §c§lESGOTOU§f! Use outro para ativar novamente.");
 					}
 				}
 			}

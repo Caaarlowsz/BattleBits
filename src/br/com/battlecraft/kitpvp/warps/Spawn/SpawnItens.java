@@ -18,8 +18,9 @@ public final class SpawnItens {
 		item.setItemMeta(itemk);
 		return item;
 	}
-	
-	public static final ItemStack newItem(final Material mat, final String name, final String[] desc, final int qt, final byte bt) {
+
+	public static final ItemStack newItem(final Material mat, final String name, final String[] desc, final int qt,
+			final byte bt) {
 		final ItemStack item = new ItemStack(mat, qt, (byte) bt);
 		final ItemMeta itemk = item.getItemMeta();
 		itemk.setDisplayName(name);
@@ -27,7 +28,7 @@ public final class SpawnItens {
 		item.setItemMeta(itemk);
 		return item;
 	}
-	
+
 	public static final ItemStack newItem(final Material mat, final String name, final int qt, final byte bt) {
 		final ItemStack item = new ItemStack(mat, qt, (byte) bt);
 		final ItemMeta itemk = item.getItemMeta();
@@ -45,9 +46,9 @@ public final class SpawnItens {
 		head.setItemMeta(headmeta);
 		return head;
 	}
-	
-	public static final ItemStack newHead(final Player p, final String owner, final String name, final String[] desc, final int quantity,
-			final byte id) {
+
+	public static final ItemStack newHead(final Player p, final String owner, final String name, final String[] desc,
+			final int quantity, final byte id) {
 		ItemStack head = new ItemStack(Material.SKULL_ITEM, quantity, (byte) id);
 		SkullMeta headmeta = (SkullMeta) head.getItemMeta();
 		headmeta.setOwner(owner);
@@ -60,14 +61,16 @@ public final class SpawnItens {
 	public static final void setWarpSpawnItensToBattlePlayer(final Player bp) {
 		bp.getInventory().clear();
 		bp.getInventory().setArmorContents(null);
-		bp.getInventory().setItem(1,
-				newItem(Material.ENDER_CHEST, "§b§lKits §7(Clique para Abrir)", new String[] { "", "§7Selecione um de seus Kits" }));
-		bp.getInventory().setItem(2,
-				newItem(Material.COMPASS, "§e§lWarps §7(Clique para Abrir)", new String[] { "", "§7Escolha uma warp para jogar" }));
+		bp.getInventory().setItem(1, newItem(Material.ENDER_CHEST, "§b§lKits §7(Clique para Abrir)",
+				new String[] { "", "§7Selecione um de seus Kits" }));
+		bp.getInventory().setItem(2, newItem(Material.COMPASS, "§e§lWarps §7(Clique para Abrir)",
+				new String[] { "", "§7Escolha uma warp para jogar" }));
 		bp.getInventory().setItem(4,
 				newItem(Material.SKULL_ITEM, "§6§lStatus - " + bp.getName() + " §7(Clique para Ver)", 1, (byte) 3));
-		bp.getInventory().setItem(6, newItem(Material.DIAMOND, "§b§lShop", new String[] { "", "§7Compre beneficios in-game ou online" }));
-		bp.getInventory().setItem(7, newItem(Material.ENCHANTED_BOOK, "§b§lEventos", new String[] { "", "§7Clique para checar se um Evento esta ocorrendo"}));
+		bp.getInventory().setItem(6,
+				newItem(Material.DIAMOND, "§b§lShop", new String[] { "", "§7Compre beneficios in-game ou online" }));
+		bp.getInventory().setItem(7, newItem(Material.ENCHANTED_BOOK, "§b§lEventos",
+				new String[] { "", "§7Clique para checar se um Evento esta ocorrendo" }));
 		bp.updateInventory();
 	}
 }

@@ -12,9 +12,9 @@ import br.com.battlecraft.kitpvp.battleplayer.BattlePlayerAPI;
 import br.com.battlecraft.kitpvp.utils.BattleStrings;
 
 public final class BuildCommand extends Command {
-	
+
 	public static final ArrayList<Player> hasBuild = new ArrayList<>();
-	
+
 	public static boolean hasBuild(final Player bp) {
 		return hasBuild.contains(bp);
 	}
@@ -47,8 +47,7 @@ public final class BuildCommand extends Command {
 				hasBuild.add(bp);
 				bp.sendMessage("§e§lBUILD§f Você §a§lhabilitou§f seu modo §e§lbuilder§f.");
 				return true;
-			}
-			else if (args[0].equalsIgnoreCase("off")) {
+			} else if (args[0].equalsIgnoreCase("off")) {
 				if (!hasBuild(bp)) {
 					bp.sendMessage("§e§lBUILD§f Seu modo §e§lbuilder§f já está desabilitado§f!");
 					return true;
@@ -66,8 +65,7 @@ public final class BuildCommand extends Command {
 			if (toBuild == null) {
 				bp.sendMessage(BattleStrings.getBattlePlayerIsNotOnlineMessage());
 				return true;
-			}
-			else if (args[0].equalsIgnoreCase("on")) {
+			} else if (args[0].equalsIgnoreCase("on")) {
 				if (hasBuild(toBuild)) {
 					bp.sendMessage("§e§lBUILD§f O modo §e§lbuilder§f do " + args[1] + " já está habilitado!");
 					return true;
@@ -76,8 +74,7 @@ public final class BuildCommand extends Command {
 				toBuild.sendMessage("§e§lBUILD§f Seu modo §e§lbuilder§f foi §a§lhabilitado§f pelo " + bp.getName());
 				bp.sendMessage("§e§lBUID§f Você §a§lhabilitou§f o modo §e§lbuilder§f do " + args[1]);
 				return true;
-			}
-			else if (args[0].equalsIgnoreCase("off")) {
+			} else if (args[0].equalsIgnoreCase("off")) {
 				if (!hasBuild(toBuild)) {
 					bp.sendMessage("§e§lBUILD§f O modo §e§lbuilder§f do " + args[1] + " já está desabilitado!");
 					return true;

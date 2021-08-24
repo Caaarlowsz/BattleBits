@@ -26,14 +26,14 @@ import br.com.battlecraft.kitpvp.warps.Spawn.SpawnItens;
 import br.com.battlecraft.kitpvp.warps.Spawn.SpawnWarpListener;
 
 public final class Gladiator implements Listener {
-	
+
 	public static final void showPlayer(final Player one, final Player two) {
 		while (inFight.get(one.getName()) == two.getName() && inFight.get(two.getName()) == one.getName()) {
 			one.showPlayer(two);
 			two.showPlayer(one);
 		}
 	}
-	
+
 	public static final void setGladiatorKit(final Player bp) {
 		PvP.defaultItens(bp);
 		KitAPI.setKit(bp, "Gladiator");
@@ -42,13 +42,13 @@ public final class Gladiator implements Listener {
 		bp.sendMessage("§3§lKIT§f Você selecionou o kit §b§lGladiator");
 		TittleAPI.sendTittle(bp, "§bKit Gladiator");
 		TittleAPI.sendSubTittle(bp, "§fescolhido com sucesso!");
-		bp.playSound(bp.getLocation(), Sound.LEVEL_UP,  2.0F, 1.0F);
+		bp.playSound(bp.getLocation(), Sound.LEVEL_UP, 2.0F, 1.0F);
 	}
 
 	public static final HashMap<String, String> inFight = new HashMap<>();
 	public static final HashMap<String, Location> oldLocation = new HashMap<>();
 	public static final HashMap<String, List<Location>> blocks = new HashMap<>();
-	
+
 	@EventHandler(priority = EventPriority.MONITOR)
 	public final void onGladiator(final PlayerInteractEntityEvent e) {
 		final Player bp = e.getPlayer();
@@ -66,7 +66,7 @@ public final class Gladiator implements Listener {
 			}
 		}
 	}
-	
+
 	public static int id = 0;
 
 	@SuppressWarnings("deprecation")
@@ -162,7 +162,7 @@ public final class Gladiator implements Listener {
 						blocks.remove(p2.getName());
 						inFight.remove(p2.getName());
 						oldLocation.remove(p2.getName());
-						
+
 						p1.sendMessage("§3§lGLADIATOR§f Nao houve vencedores! Voce foi teleportado para onde estava.");
 						p2.sendMessage("§3§lGLADIATOR§f Nao houve vencedores! Voce foi teleportado para onde estava.");
 					}
@@ -171,7 +171,7 @@ public final class Gladiator implements Listener {
 		}, 3600L);
 		return null;
 	}
-	
+
 	public static final void resetGladiatorByKill(final Player winner, final Player loser) {
 		for (int i = 1; i < 5; i++) {
 			winner.teleport(oldLocation.get(winner.getName()));
@@ -197,11 +197,11 @@ public final class Gladiator implements Listener {
 		blocks.remove(loser.getName());
 		inFight.remove(loser.getName());
 		oldLocation.remove(loser.getName());
-		
+
 		winner.sendMessage("§3§lGLADIATOR§f Voce venceu a batalha contra §b§l" + loser.getName());
 		loser.sendMessage("§3§lGLADIATOR§f Voce perdeu a batalha contra §b§l" + winner.getName());
 	}
-	
+
 	public static final void resetGladiatorByScreenshare(final Player winner, final Player loser) {
 		for (int i = 1; i < 5; i++) {
 			winner.teleport(oldLocation.get(winner.getName()));
@@ -224,10 +224,10 @@ public final class Gladiator implements Listener {
 		blocks.remove(loser.getName());
 		inFight.remove(loser.getName());
 		oldLocation.remove(loser.getName());
-		
+
 		winner.sendMessage("§c" + loser.getName() + " foi puxado para screenshare.");
 	}
-	
+
 	public static final void resetGladiatorByTpAll(final Player winner, final Player loser) {
 		for (PotionEffect pot : winner.getActivePotionEffects()) {
 			winner.removePotionEffect(pot.getType());
@@ -248,7 +248,7 @@ public final class Gladiator implements Listener {
 		inFight.remove(loser.getName());
 		oldLocation.remove(loser.getName());
 	}
-	
+
 	public static final void resetGladiatorByQuit(final Player winner, final Player loser) {
 		for (int i = 1; i < 5; i++) {
 			winner.teleport(oldLocation.get(winner.getName()));
@@ -271,7 +271,7 @@ public final class Gladiator implements Listener {
 		blocks.remove(loser.getName());
 		inFight.remove(loser.getName());
 		oldLocation.remove(loser.getName());
-		
+
 		winner.sendMessage("§3§lGLADIATOR§f O player §b§l" + loser.getName() + "§f deslogou.");
 	}
 }

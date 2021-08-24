@@ -14,7 +14,7 @@ import br.com.battlecraft.kitpvp.BukkitMain;
 import net.minecraft.util.io.netty.util.internal.ConcurrentSet;
 
 public class HologramEvent implements Listener {
-	
+
 	/**
 	 * 
 	 */

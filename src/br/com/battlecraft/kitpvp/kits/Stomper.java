@@ -23,7 +23,7 @@ public final class Stomper implements Listener {
 		bp.sendMessage("§3§lKIT§f Você selecionou o kit §b§lStomper");
 		TittleAPI.sendTittle(bp, "§bKit Stomper");
 		TittleAPI.sendSubTittle(bp, "§fescolhido com sucesso!");
-		bp.playSound(bp.getLocation(), Sound.LEVEL_UP,  2.0F, 1.0F);
+		bp.playSound(bp.getLocation(), Sound.LEVEL_UP, 2.0F, 1.0F);
 	}
 
 	@SuppressWarnings("deprecation")

@@ -25,11 +25,11 @@ public final class BattlePlayerAPI {
 	public static final Player BattlePlayer(final Player bp) {
 		return bp;
 	}
-	
+
 	public static final Player BattlePlayer(final String bpName) {
 		return Bukkit.getPlayer(bpName);
 	}
-	
+
 	@SuppressWarnings("deprecation")
 	public static final OfflinePlayer BattlePlayerOffline(final String bpName) {
 		return Bukkit.getOfflinePlayer(bpName);
@@ -41,7 +41,7 @@ public final class BattlePlayerAPI {
 		}
 		return bpName.getName();
 	}
-	
+
 	public static final String getBattlePlayerName(final OfflinePlayer bpName) {
 		if (bpName.getName().length() > getMaxMojangPlayerNameLenth()) {
 			return bpName.getName().substring(0, 16);
@@ -52,7 +52,7 @@ public final class BattlePlayerAPI {
 	public static final UUID getBattlePlayerUuid(final Player bp) {
 		return bp.getUniqueId();
 	}
-	
+
 	public static final UUID getBattlePlayerUuid(final OfflinePlayer bp) {
 		return bp.getUniqueId();
 	}

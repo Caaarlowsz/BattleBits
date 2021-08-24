@@ -81,7 +81,7 @@ public final class FakeBattlePlayerAPI {
 			hidePlayer(player, playerFor);
 		}
 	}
-	
+
 	public static final void setBattlePlayerNewName(final Player bp, final String newName) {
 		bp.setDisplayName(newName);
 		bp.setPlayerListName(newName);
@@ -110,7 +110,8 @@ public final class FakeBattlePlayerAPI {
 			return;
 		}
 		for (final Player all : Bukkit.getOnlinePlayers()) {
-			if (fakeBattlePlayerName.equalsIgnoreCase(all.getName()) || fakeBattlePlayerName.contains(all.getName()) || fakeBattlePlayerName.contains(all.getName())) {
+			if (fakeBattlePlayerName.equalsIgnoreCase(all.getName()) || fakeBattlePlayerName.contains(all.getName())
+					|| fakeBattlePlayerName.contains(all.getName())) {
 				bp.sendMessage("§1§lFAKE§f Algum jogador ja esta §3§lUTILIZANDO§f este nick!");
 				return;
 			}

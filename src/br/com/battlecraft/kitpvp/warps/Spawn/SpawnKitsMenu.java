@@ -57,80 +57,77 @@ public final class SpawnKitsMenu implements Listener {
 				new String[] { "", "§7Clique aqui para comprar kits na", "§7loja online ou com moedas in-game!", "" },
 				1, (byte) 5));
 		menu.setItem(5, SpawnItens.newItem(Material.WOOL, "§c§lMenu desativado",
-				new String[] { "", "§7Esta opçao esta desativada", "" }, 1,
-				(byte) 14));
-		menu.setItem(6,
-				SpawnItens.newItem(Material.WOOL, "§c§lMenu desativado", new String[] { "",
-						"§7Esta opçao esta desativada", "" }, 1,
-						(byte) 11));
+				new String[] { "", "§7Esta opçao esta desativada", "" }, 1, (byte) 14));
+		menu.setItem(6, SpawnItens.newItem(Material.WOOL, "§c§lMenu desativado",
+				new String[] { "", "§7Esta opçao esta desativada", "" }, 1, (byte) 11));
 		menu.setItem(8, SpawnItens.newItem(Material.getMaterial(351), "§8§lProxima pagina", new String[] { null }, 1,
 				(byte) 8));
 		for (int i = 9; i < 18; i++) {
 			menu.setItem(i, SpawnItens.newItem(Material.STAINED_GLASS_PANE, "§e§lSeus Kits", 1, (byte) 4));
 		}
 
-menu.addItem(ItensKit.PvP());
-		
+		menu.addItem(ItensKit.PvP());
+
 		if (bp.hasPermission("pvp.kit.kangaroo")) {
 			menu.addItem(ItensKit.Kangaroo());
 		}
-		
+
 		if (bp.hasPermission("pvp.kit.gladiator")) {
 			menu.addItem(ItensKit.Gladiator());
 		}
-		
+
 		if (bp.hasPermission("pvp.kit.anchor")) {
 			menu.addItem(ItensKit.Anchor());
 		}
-		
+
 		if (bp.hasPermission("pvp.kit.ajnin")) {
 			menu.addItem(ItensKit.Ajnin());
 		}
-		
+
 		if (bp.hasPermission("pvp.kit.ninja")) {
 			menu.addItem(ItensKit.Ninja());
 		}
-		
+
 		if (bp.hasPermission("pvp.kit.minato")) {
 			menu.addItem(ItensKit.Minato());
 		}
-		
+
 		if (bp.hasPermission("pvp.kit.stomper")) {
 			menu.addItem(ItensKit.Stomper());
 		}
-		
+
 		if (bp.hasPermission("pvp.kit.antistomper")) {
 			menu.addItem(ItensKit.AntiStomper());
 		}
-		
+
 		if (bp.hasPermission("pvp.kit.fireman")) {
 			menu.addItem(ItensKit.Fireman());
 		}
-		
+
 		if (bp.hasPermission("pvp.kit.magma")) {
 			menu.addItem(ItensKit.Magma());
 		}
-		
+
 		if (bp.hasPermission("pvp.kit.hulk")) {
 			menu.addItem(ItensKit.Hulk());
 		}
-		
+
 		if (bp.hasPermission("pvp.kit.monk")) {
 			menu.addItem(ItensKit.Monk());
 		}
-		
+
 		if (bp.hasPermission("pvp.kit.switcher")) {
 			menu.addItem(ItensKit.Switcher());
 		}
-		
+
 		if (bp.hasPermission("pvp.kit.thor")) {
 			menu.addItem(ItensKit.Thor());
 		}
-		
+
 		if (bp.hasPermission("pvp.kit.timelord")) {
 			menu.addItem(ItensKit.Timelord());
 		}
-		
+
 		if (bp.hasPermission("pvp.kit.viking")) {
 			menu.addItem(ItensKit.Viking());
 		}
@@ -143,50 +140,52 @@ menu.addItem(ItensKit.PvP());
 		}
 		bp.openInventory(menu);
 	}
-	
+
 	public static final void oPenAllKitsMenu(final Player bp) {
 
 		Inventory menu = Bukkit.createInventory(bp, 54, "§b§lTodos os Kits");
 		for (int i = 0; i < 9; i++) {
 			menu.setItem(i, SpawnItens.newItem(Material.STAINED_GLASS_PANE, "§e§lTodos os Kits", 1, (byte) 4));
 		}
-		
-		menu.setItem(3, SpawnItens.newItem(Material.CHEST, "§b§lSeus Kits", new String[] {"§7Clique para ver os seus Kits"}));
-		
-		menu.setItem(5, SpawnItens.newItem(Material.DIAMOND, "§b§lLoja", new String[] {"§7Clique para abrir a loja de Kits"}));
+
+		menu.setItem(3,
+				SpawnItens.newItem(Material.CHEST, "§b§lSeus Kits", new String[] { "§7Clique para ver os seus Kits" }));
+
+		menu.setItem(5, SpawnItens.newItem(Material.DIAMOND, "§b§lLoja",
+				new String[] { "§7Clique para abrir a loja de Kits" }));
 
 		menu.addItem(ItensKit.PvP());
-		
+
 		menu.addItem(ItensKit.Kangaroo());
-		
+
 		menu.addItem(ItensKit.Gladiator());
-		
+
 		menu.addItem(ItensKit.Anchor());
-		
+
 		menu.addItem(ItensKit.Ajnin());
-		
+
 		menu.addItem(ItensKit.Ninja());
-		
+
 		menu.addItem(ItensKit.Minato());
-		
+
 		menu.addItem(ItensKit.Stomper());
-		
+
 		menu.addItem(ItensKit.AntiStomper());
-		
+
 		menu.addItem(ItensKit.Fireman());
-		
+
 		menu.addItem(ItensKit.Magma());
-		
+
 		menu.addItem(ItensKit.Hulk());
-		
+
 		menu.addItem(ItensKit.Monk());
-		
+
 		menu.addItem(ItensKit.Switcher());
-		
+
 		menu.addItem(ItensKit.Thor());
-		
+
 		menu.addItem(ItensKit.Timelord());
-		
+
 		menu.addItem(ItensKit.Viking());
 
 		bp.openInventory(menu);
@@ -389,7 +388,7 @@ menu.addItem(ItensKit.PvP());
 			}
 		}
 	}
-	
+
 	@EventHandler
 	public final void onInventoryAllKitsClick(final InventoryClickEvent e) {
 		if (e.getWhoClicked() instanceof Player) {

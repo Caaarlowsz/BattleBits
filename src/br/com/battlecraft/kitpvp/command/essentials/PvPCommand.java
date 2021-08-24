@@ -13,7 +13,7 @@ public final class PvPCommand extends Command {
 	public PvPCommand(String name, String description, String usageMessage, List<String> aliases) {
 		super(name, description, usageMessage, aliases);
 	}
-	
+
 	public static boolean onPvP = true;
 
 	@Override
@@ -26,12 +26,14 @@ public final class PvPCommand extends Command {
 			if (onPvP) {
 				onPvP = false;
 				sender.sendMessage("§4§lPVP§f Voce §c§ldesabilitou§f o pvp global.");
-				Bukkit.getServer().broadcastMessage("§4§lPVP§f O PVP global foi §c§ldesabilitado§f! §e(hit entre jogadores)");
+				Bukkit.getServer()
+						.broadcastMessage("§4§lPVP§f O PVP global foi §c§ldesabilitado§f! §e(hit entre jogadores)");
 				return true;
 			} else {
 				onPvP = true;
 				sender.sendMessage("§4§lPVP§f Voce §a§lhabilitou§f o pvp global.");
-				Bukkit.getServer().broadcastMessage("§4§lPVP§f O PVP global foi §a§lhabilitado§f! §e(hit entre jogadores)");
+				Bukkit.getServer()
+						.broadcastMessage("§4§lPVP§f O PVP global foi §a§lhabilitado§f! §e(hit entre jogadores)");
 				return true;
 			}
 		}

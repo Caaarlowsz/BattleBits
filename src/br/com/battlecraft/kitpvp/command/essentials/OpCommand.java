@@ -19,18 +19,15 @@ public final class OpCommand extends Command {
 
 	public static final void setOp(final CommandSender sender, final Player bp) {
 		if (BattlePlayerAPI.getBattlePlayerName(bp).length() > 16) {
-			sender.sendMessage(
-					"§4§lOP§f O nick deste player é §c§linvalido§f! Possui mais de §9§l16 CARATERES§f!");
+			sender.sendMessage("§4§lOP§f O nick deste player é §c§linvalido§f! Possui mais de §9§l16 CARATERES§f!");
 			return;
 		}
 		if (!BattlePlayerAPI.validate(BattlePlayerAPI.getBattlePlayerName(bp))) {
-			sender.sendMessage(
-					"§4§lOP§f O nick deste player é §c§linvalido§f! Possui carateres §4§lnao permitidos§f!");
+			sender.sendMessage("§4§lOP§f O nick deste player é §c§linvalido§f! Possui carateres §4§lnao permitidos§f!");
 			return;
 		}
 		if (bp.isOp()) {
-			sender.sendMessage(
-					"§4§lOP§f O player " + BattlePlayerAPI.getBattlePlayerName(bp) + " ja é um §4§lOP§f!");
+			sender.sendMessage("§4§lOP§f O player " + BattlePlayerAPI.getBattlePlayerName(bp) + " ja é um §4§lOP§f!");
 			return;
 		}
 		bp.setOp(true);
@@ -48,18 +45,15 @@ public final class OpCommand extends Command {
 
 	public static final void setOp(final CommandSender sender, final OfflinePlayer bp) {
 		if (BattlePlayerAPI.getBattlePlayerName(bp).length() > 16) {
-			sender.sendMessage(
-					"§4§lOP§f O nick deste player é §c§linvalido§f! Possui mais de §9§l16 CARATERES§f!");
+			sender.sendMessage("§4§lOP§f O nick deste player é §c§linvalido§f! Possui mais de §9§l16 CARATERES§f!");
 			return;
 		}
 		if (!BattlePlayerAPI.validate(BattlePlayerAPI.getBattlePlayerName(bp))) {
-			sender.sendMessage(
-					"§4§lOP§f O nick deste player é §c§linvalido§f! Possui carateres §4§lnao permitidos§f!");
+			sender.sendMessage("§4§lOP§f O nick deste player é §c§linvalido§f! Possui carateres §4§lnao permitidos§f!");
 			return;
 		}
 		if (bp.isOp()) {
-			sender.sendMessage(
-					"§4§lOP§f O player " + BattlePlayerAPI.getBattlePlayerName(bp) + " ja é um §4§lOP§f!");
+			sender.sendMessage("§4§lOP§f O player " + BattlePlayerAPI.getBattlePlayerName(bp) + " ja é um §4§lOP§f!");
 			return;
 		}
 		bp.setOp(true);
@@ -92,8 +86,7 @@ public final class OpCommand extends Command {
 			}
 			setOp(sender, bp);
 			return true;
-		}
-		else if (args.length > 1) {
+		} else if (args.length > 1) {
 			sender.sendMessage("§4§lOP§f De op com: /op <playerName>");
 			return true;
 		}

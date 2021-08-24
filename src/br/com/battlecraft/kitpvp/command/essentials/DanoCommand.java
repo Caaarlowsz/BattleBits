@@ -13,7 +13,7 @@ public final class DanoCommand extends Command {
 	public DanoCommand(String name, String description, String usageMessage, List<String> aliases) {
 		super(name, description, usageMessage, aliases);
 	}
-	
+
 	public static boolean onDamage = true;
 
 	@Override
@@ -26,12 +26,14 @@ public final class DanoCommand extends Command {
 			if (onDamage) {
 				onDamage = false;
 				sender.sendMessage("§4§lDANO§f Voce §c§ldesabilitou§f o dano global.");
-				Bukkit.getServer().broadcastMessage("§4§lDANO§f O DANO global foi §c§ldesabilitado§f! §e(hit entre jogadores, lava, queda etc)");
+				Bukkit.getServer().broadcastMessage(
+						"§4§lDANO§f O DANO global foi §c§ldesabilitado§f! §e(hit entre jogadores, lava, queda etc)");
 				return true;
 			} else {
 				onDamage = true;
 				sender.sendMessage("§4§lDANO§f Voce §a§lhabilitou§f o dano global.");
-				Bukkit.getServer().broadcastMessage("§4§lDANO§f O DANO global foi §a§lhabilitado§f! §e(hit entre jogadores, lava, queda etc)");
+				Bukkit.getServer().broadcastMessage(
+						"§4§lDANO§f O DANO global foi §a§lhabilitado§f! §e(hit entre jogadores, lava, queda etc)");
 				return true;
 			}
 		}

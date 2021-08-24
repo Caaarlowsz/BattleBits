@@ -34,7 +34,8 @@ public final class FakeBattlePlayerRandomAPI {
 			return null;
 		}
 		if (!BattlePlayerAPI.validate(randomFake)) {
-			IllegalArgumentException e = new IllegalArgumentException("O formato do nick random '" + randomFake + "' e ilegal");
+			IllegalArgumentException e = new IllegalArgumentException(
+					"O formato do nick random '" + randomFake + "' e ilegal");
 			e.printStackTrace();
 			bp.sendMessage(ExceptionFakeRandomMessage);
 			return null;

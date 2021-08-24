@@ -22,15 +22,16 @@ public final class Fireman implements Listener {
 		bp.sendMessage("§3§lKIT§f Você selecionou o kit §b§lFireman");
 		TittleAPI.sendTittle(bp, "§bKit Fireman");
 		TittleAPI.sendSubTittle(bp, "§fescolhido com sucesso!");
-		bp.playSound(bp.getLocation(), Sound.LEVEL_UP,  2.0F, 1.0F);
+		bp.playSound(bp.getLocation(), Sound.LEVEL_UP, 2.0F, 1.0F);
 	}
-	
+
 	@EventHandler(priority = EventPriority.MONITOR)
 	public final void onEntityDamage(final EntityDamageEvent e) {
 		if (e.getEntity() instanceof Player) {
 			Player p = (Player) e.getEntity();
 			if (KitAPI.getKit(p) == "Fireman") {
-				if (e.getCause() == DamageCause.LAVA || e.getCause() == DamageCause.FIRE || e.getCause() == DamageCause.FIRE_TICK) {
+				if (e.getCause() == DamageCause.LAVA || e.getCause() == DamageCause.FIRE
+						|| e.getCause() == DamageCause.FIRE_TICK) {
 					e.setCancelled(true);
 				}
 			}

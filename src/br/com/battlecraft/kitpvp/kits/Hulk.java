@@ -15,7 +15,7 @@ import br.com.battlecraft.kitpvp.api.TittleAPI;
 import br.com.battlecraft.kitpvp.warps.Spawn.SpawnItens;
 
 public final class Hulk implements Listener {
-	
+
 	public static final void setHulkKit(final Player bp) {
 		PvP.defaultItens(bp);
 		KitAPI.setKit(bp, "Hulk");
@@ -24,7 +24,7 @@ public final class Hulk implements Listener {
 		bp.sendMessage("§3§lKIT§f Você selecionou o kit §b§lHulk");
 		TittleAPI.sendTittle(bp, "§bKit Hulk");
 		TittleAPI.sendSubTittle(bp, "§fescolhido com sucesso!");
-		bp.playSound(bp.getLocation(), Sound.LEVEL_UP,  2.0F, 1.0F);
+		bp.playSound(bp.getLocation(), Sound.LEVEL_UP, 2.0F, 1.0F);
 	}
 
 	@EventHandler(priority = EventPriority.MONITOR)

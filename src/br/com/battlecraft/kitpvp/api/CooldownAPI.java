@@ -35,7 +35,7 @@ public final class CooldownAPI {
 
 		if ((Cooldown.containsKey(bp.getName()))
 				|| (((Long) Cooldown.get(bp.getName())).longValue() > System.currentTimeMillis())) {
-			return TimeConverter.ConvertTime((int)time);
+			return TimeConverter.ConvertTime((int) time);
 		}
 		return "0:00";
 	}

@@ -54,7 +54,7 @@ public final class KsAPI {
 		Ks.set(p.getName(), getKillStreak(p) - Qntd);
 		saveKillStreak();
 	}
-	
+
 	public static int getKillStreak(OfflinePlayer p) {
 		return (int) Ks.getInt(p.getName());
 	}
@@ -63,12 +63,12 @@ public final class KsAPI {
 		Ks.set(p.getName(), getKillStreak(p) + Qntd);
 		saveKillStreak();
 	}
-	
+
 	public static void removeKillStreak(OfflinePlayer p) {
 		Ks.set(p.getName(), 0);
 		saveKillStreak();
 	}
-	
+
 	public static void removeKillStreak(Player p) {
 		Ks.set(p.getName(), 0);
 		saveKillStreak();

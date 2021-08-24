@@ -26,9 +26,9 @@ public final class Magma implements Listener {
 		bp.sendMessage("§3§lKIT§f Você selecionou o kit §b§lMagma");
 		TittleAPI.sendTittle(bp, "§bKit Magma");
 		TittleAPI.sendSubTittle(bp, "§fescolhido com sucesso!");
-		bp.playSound(bp.getLocation(), Sound.LEVEL_UP,  2.0F, 1.0F);
+		bp.playSound(bp.getLocation(), Sound.LEVEL_UP, 2.0F, 1.0F);
 	}
-	
+
 	@EventHandler(priority = EventPriority.MONITOR)
 	public final void onEntityDamage(final EntityDamageEvent e) {
 		if (e.getEntity() instanceof Player) {

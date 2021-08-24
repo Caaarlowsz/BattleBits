@@ -93,12 +93,14 @@ public final class InteractFramesEvent implements Listener {
 				if (i.getType() == Material.DIAMOND_SWORD && !i.getEnchantments().containsKey(Enchantment.DAMAGE_ALL)) {
 					e.setCancelled(true);
 					if (AccountAPI.getBattlePlayerMoney(bp) < 50) {
-						bp.sendMessage("§3§lSHARP§f Voce precisa de §6§l50 MOEDAS§f para encantar §3§lSHARPNESS§f na sua espada!");
+						bp.sendMessage(
+								"§3§lSHARP§f Voce precisa de §6§l50 MOEDAS§f para encantar §3§lSHARPNESS§f na sua espada!");
 						return;
 					}
 					i.addEnchantment(Enchantment.DAMAGE_ALL, 1);
 					AccountAPI.removeBattlePlayerMoney(bp, 50);
-					bp.sendMessage("§3§lSHARP§f Voce usou §6§l50 MOEDAS§f para encantar sua espada com §3§lSHARPNESS§f!");
+					bp.sendMessage(
+							"§3§lSHARP§f Voce usou §6§l50 MOEDAS§f para encantar sua espada com §3§lSHARPNESS§f!");
 				} else {
 					e.setCancelled(true);
 					bp.sendMessage("§3§lSHARP§f Voce so pode §c§lencantar§f uma espada sem §3§lSHARP§f!");

@@ -25,7 +25,8 @@ public final class DeopCommand extends Command {
 		}
 		bp.setOp(false);
 		bp.sendMessage("§4§lDEOP§f Seu §c§lop§f foi removido por " + sender.getName() + ".");
-		sender.sendMessage("§4§lOP§f O player " + BattlePlayerAPI.getBattlePlayerName(bp) + " agora nao é mais um §c§lop§f!");
+		sender.sendMessage(
+				"§4§lOP§f O player " + BattlePlayerAPI.getBattlePlayerName(bp) + " agora nao é mais um §c§lop§f!");
 		if (Bukkit.getServer().getPluginManager().isPluginEnabled("PermissionsEx")) {
 			sender.sendMessage(" ");
 			sender.sendMessage("§c-=-=-=-=-=-=-=-=-=-");
@@ -43,7 +44,8 @@ public final class DeopCommand extends Command {
 			return;
 		}
 		bp.setOp(false);
-		sender.sendMessage("§4§lOP§f O player " + BattlePlayerAPI.getBattlePlayerName(bp) + " agora nao é mais um §c§lop§f!");
+		sender.sendMessage(
+				"§4§lOP§f O player " + BattlePlayerAPI.getBattlePlayerName(bp) + " agora nao é mais um §c§lop§f!");
 		if (Bukkit.getServer().getPluginManager().isPluginEnabled("PermissionsEx")) {
 			sender.sendMessage(" ");
 			sender.sendMessage("§c-=-=-=-=-=-=-=-=-=-");
@@ -72,8 +74,7 @@ public final class DeopCommand extends Command {
 			}
 			deOp(sender, bp);
 			return true;
-		}
-		else if (args.length > 1) {
+		} else if (args.length > 1) {
 			sender.sendMessage("§4§lDEOP§f Tire op com: /deop <playerName>");
 			return true;
 		}

@@ -26,7 +26,7 @@ public final class Timelord implements Listener {
 
 	@SuppressWarnings({ "unchecked", "rawtypes" })
 	public static ArrayList<String> frozed = new ArrayList();
-	
+
 	public static final void setThorKit(final Player bp) {
 		PvP.defaultItens(bp);
 		KitAPI.setKit(bp, "Timelord");
@@ -35,7 +35,7 @@ public final class Timelord implements Listener {
 		bp.sendMessage("§3§lKIT§f Você selecionou o kit §b§lTimelord");
 		TittleAPI.sendTittle(bp, "§bKit Timelord");
 		TittleAPI.sendSubTittle(bp, "§fescolhido com sucesso!");
-		bp.playSound(bp.getLocation(), Sound.LEVEL_UP,  2.0F, 1.0F);
+		bp.playSound(bp.getLocation(), Sound.LEVEL_UP, 2.0F, 1.0F);
 	}
 
 	@EventHandler(priority = EventPriority.MONITOR)

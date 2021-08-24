@@ -21,7 +21,7 @@ public final class BukkitTasks {
 	public static String TittleCapiroto = "BattleCraf";
 	public static String TittleTab = "BattleCraf";
 	public static String TittleEvento = "BattleCraf";
-	
+
 	public static final void updateAllAnimations() {
 		Bukkit.getScheduler().scheduleSyncRepeatingTask(BukkitMain.getPlugin(), new Runnable() {
 			@Override
@@ -32,10 +32,10 @@ public final class BukkitTasks {
 				run_Challenge();
 				run_Capiroto();
 				run_Evento();
-			}			
+			}
 		}, 0, 9L);
 	}
-	
+
 	public static final void run_Evento() {
 		if (EVENTO == 1) {
 			TittleEvento = "BattleCraf";
@@ -106,7 +106,7 @@ public final class BukkitTasks {
 		}
 		EVENTO++;
 	}
-	
+
 	public static final void run_Spawn() {
 		if (SPAWN == 1) {
 			TittleSpawn = "BattleCraf";
@@ -177,7 +177,7 @@ public final class BukkitTasks {
 		}
 		SPAWN++;
 	}
-	
+
 	public static final void run_Fps() {
 		if (FPS == 1) {
 			TittleFps = "BattleCraf";
@@ -242,7 +242,7 @@ public final class BukkitTasks {
 		}
 		FPS++;
 	}
-	
+
 	public static final void run_1v1() {
 		if (ONEVSONE == 1) {
 			TittleOneVsOne = "BattleCraf";
@@ -307,7 +307,7 @@ public final class BukkitTasks {
 		}
 		ONEVSONE++;
 	}
-	
+
 	public static final void run_Challenge() {
 		if (CHALLENGE == 1) {
 			TittleChallenge = "BattleCraf";
@@ -405,7 +405,7 @@ public final class BukkitTasks {
 		}
 		CHALLENGE++;
 	}
-	
+
 	public static final void run_Capiroto() {
 		if (CAPIROTO == 1) {
 			TittleCapiroto = "BattleCraf";
@@ -485,7 +485,7 @@ public final class BukkitTasks {
 		}
 		CAPIROTO++;
 	}
-	
+
 	public static final void run_Tab() {
 		if (TAB == 1) {
 			TittleTab = "BattleCraft";

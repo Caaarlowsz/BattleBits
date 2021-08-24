@@ -192,7 +192,8 @@ public final class PlayerDeathEvents implements Listener {
 					LocationsConstructor.teleportToBattleWarpLocation(bp, "Spawn");
 				}
 			}.runTask(BukkitMain.getPlugin());
-		} else if (WarpsAPI.battlePlayerWarp.get(bp) == WarpsAPI.Warps.EVENTO || EventoAPI.Players.contains(bp.getName())) {
+		} else if (WarpsAPI.battlePlayerWarp.get(bp) == WarpsAPI.Warps.EVENTO
+				|| EventoAPI.Players.contains(bp.getName())) {
 			bp.sendMessage("§3§lEVENTO§f Voce morreu e foi enviado para o §eSPAWN.");
 			if (CombatSystem.combat.containsKey(bp.getName())) {
 				CombatSystem.combat.remove(bp.getName());

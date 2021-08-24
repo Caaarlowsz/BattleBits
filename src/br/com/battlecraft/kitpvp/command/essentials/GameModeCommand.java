@@ -15,14 +15,14 @@ public final class GameModeCommand extends Command {
 	public GameModeCommand(String name, String description, String usageMessage, List<String> aliases) {
 		super(name, description, usageMessage, aliases);
 	}
-	
+
 	public static final void setGamemode(final Player p, final String args) {
 		if (args.equalsIgnoreCase("0") || args.equalsIgnoreCase("survival")) {
 			if (p.getGameMode() == GameMode.SURVIVAL) {
 				p.sendMessage("§3§lGAMEMODE§f Você ja §c§lesta neste gamemode§f!");
 				return;
 			}
-			p.setGameMode( GameMode.SURVIVAL);
+			p.setGameMode(GameMode.SURVIVAL);
 			p.sendMessage("§3§lGAMEMODE§f Seu gamemode foi ALTERADO para §b§lsurvival§f.");
 			return;
 		} else if (args.equalsIgnoreCase("1") || args.equalsIgnoreCase("creative")) {
@@ -30,7 +30,7 @@ public final class GameModeCommand extends Command {
 				p.sendMessage("§3§lGAMEMODE§f Você ja §c§lesta neste gamemode§f!");
 				return;
 			}
-			p.setGameMode( GameMode.CREATIVE);
+			p.setGameMode(GameMode.CREATIVE);
 			p.sendMessage("§3§lGAMEMODE§f Seu gamemode foi ALTERADO para §b§lcreative§f.");
 			return;
 		} else if (args.equalsIgnoreCase("2") || args.equalsIgnoreCase("adventure")) {
@@ -38,7 +38,7 @@ public final class GameModeCommand extends Command {
 				p.sendMessage("§3§lGAMEMODE§f Você ja §c§lesta neste gamemode§f!");
 				return;
 			}
-			p.setGameMode( GameMode.ADVENTURE);
+			p.setGameMode(GameMode.ADVENTURE);
 			p.sendMessage("§3§lGAMEMODE§f Seu gamemode foi ALTERADO para §b§ladventure§f.");
 			return;
 		} else {
@@ -50,25 +50,21 @@ public final class GameModeCommand extends Command {
 	public static final void setGamemode(final Player p, final Player toGm, final String args) {
 		if (args.equalsIgnoreCase("0") || args.equalsIgnoreCase("survival")) {
 			if (toGm.getGameMode() == GameMode.SURVIVAL) {
-				p.sendMessage(
-						"§3§lGAMEMODE§f O gamemode do player  " + toGm.getName() + " já §c§lesta no survival§f.");
+				p.sendMessage("§3§lGAMEMODE§f O gamemode do player  " + toGm.getName() + " já §c§lesta no survival§f.");
 				return;
 			}
 			toGm.setGameMode(GameMode.SURVIVAL);
-			toGm.sendMessage(
-					"§3§lGAMEMODE§f O player " + p.getName() + " ALTEROU seu gamemode para §b§lsurvival§f.");
+			toGm.sendMessage("§3§lGAMEMODE§f O player " + p.getName() + " ALTEROU seu gamemode para §b§lsurvival§f.");
 			p.sendMessage(
 					"§3§lGAMEMODE§f Você ALTEROU o gamemode do player " + toGm.getName() + " para §b§lsurvival§f!");
 			return;
 		} else if (args.equalsIgnoreCase("1") || args.equalsIgnoreCase("creative")) {
 			if (toGm.getGameMode() == GameMode.CREATIVE) {
-				p.sendMessage(
-						"§3§lGAMEMODE§f O gamemode do player  " + toGm.getName() + " já §c§lesta no creative§f.");
+				p.sendMessage("§3§lGAMEMODE§f O gamemode do player  " + toGm.getName() + " já §c§lesta no creative§f.");
 				return;
 			}
 			toGm.setGameMode(GameMode.CREATIVE);
-			toGm.sendMessage(
-					"§3§lGAMEMODE§f O player " + p.getName() + " ALTEROU seu gamemode para §b§lcreative§f.");
+			toGm.sendMessage("§3§lGAMEMODE§f O player " + p.getName() + " ALTEROU seu gamemode para §b§lcreative§f.");
 			p.sendMessage(
 					"§3§lGAMEMODE§f Você ALTEROU o gamemode do player " + toGm.getName() + " para §b§lcreative§f!");
 			return;
@@ -79,8 +75,7 @@ public final class GameModeCommand extends Command {
 				return;
 			}
 			toGm.setGameMode(GameMode.ADVENTURE);
-			toGm.sendMessage(
-					"§3§lGAMEMODE§f O player " + p.getName() + " ALTEROU seu gamemode para §b§ladventure§f.");
+			toGm.sendMessage("§3§lGAMEMODE§f O player " + p.getName() + " ALTEROU seu gamemode para §b§ladventure§f.");
 			p.sendMessage(
 					"§3§lGAMEMODE§f Você ALTEROU o gamemode do player " + toGm.getName() + " para §b§ladventure§f!");
 			return;
@@ -125,4 +120,3 @@ public final class GameModeCommand extends Command {
 		return false;
 	}
 }
-

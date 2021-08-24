@@ -1,9 +1,9 @@
 package br.com.battlecraft.kitpvp.fakebattleplayer;
 
 public final class RandomNames {
-	
+
 	public static final int TotalFakeRandoms = 20;
-	
+
 	public static final String f1 = "VilhenaPvP__";
 	public static final String f2 = "iWooomboTV_";
 	public static final String f3 = "NutellahG0D";
@@ -24,7 +24,7 @@ public final class RandomNames {
 	public static final String f18 = "kkkkkkkk";
 	public static final String f19 = "Gefforceyyy";
 	public static final String f20 = "Refilleyyyy";
-	
+
 	public static final int getTotalFakeRandoms() {
 		return TotalFakeRandoms;
 	}

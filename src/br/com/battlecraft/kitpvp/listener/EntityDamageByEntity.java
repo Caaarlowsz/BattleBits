@@ -41,11 +41,13 @@ public final class EntityDamageByEntity implements Listener {
 				PlayerDeathEvents.repairArmor(damaged);
 			}
 
-			if (WarpsAPI.battlePlayerWarp.get(damager) == WarpsAPI.Warps.ONEVSONE && !X1WarpListener.playerfigh.containsKey(damager)) {
+			if (WarpsAPI.battlePlayerWarp.get(damager) == WarpsAPI.Warps.ONEVSONE
+					&& !X1WarpListener.playerfigh.containsKey(damager)) {
 				event.setCancelled(true);
 			}
 
-			if (WarpsAPI.battlePlayerWarp.get(damager) == WarpsAPI.Warps.ONEVSONE && X1WarpListener.playerfigh.containsKey(damager)
+			if (WarpsAPI.battlePlayerWarp.get(damager) == WarpsAPI.Warps.ONEVSONE
+					&& X1WarpListener.playerfigh.containsKey(damager)
 					&& X1WarpListener.playerfigh.get(damager) != damaged.getName()) {
 				event.setCancelled(true);
 			}

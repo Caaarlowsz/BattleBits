@@ -14,7 +14,7 @@ import br.com.battlecraft.kitpvp.warps.Fps.FpsWarpListener;
 import br.com.battlecraft.kitpvp.warps.Spawn.SpawnWarpListener;
 
 public final class Boxer implements Listener {
-	
+
 	public static final void setBoxerKit(final Player bp) {
 		PvP.defaultItens(bp);
 		KitAPI.setKit(bp, "Boxer");
@@ -22,9 +22,9 @@ public final class Boxer implements Listener {
 		bp.sendMessage("§3§lKIT§f Você selecionou o kit §b§lBoxer");
 		TittleAPI.sendTittle(bp, "§bKit Boxer");
 		TittleAPI.sendSubTittle(bp, "§fescolhido com sucesso!");
-		bp.playSound(bp.getLocation(), Sound.LEVEL_UP,  2.0F, 1.0F);
+		bp.playSound(bp.getLocation(), Sound.LEVEL_UP, 2.0F, 1.0F);
 	}
-	
+
 	@EventHandler
 	public final void onBoxerDamaged(final EntityDamageByEntityEvent e) {
 		if (e.isCancelled()) {
@@ -32,7 +32,8 @@ public final class Boxer implements Listener {
 		}
 		if (e.getEntity() instanceof Player) {
 			final Player damaged = (Player) e.getEntity();
-			if (SpawnWarpListener.onWarpSpawnProtection.contains(damaged) || FpsWarpListener.onFpsSpawnProtection.contains(damaged)) {
+			if (SpawnWarpListener.onWarpSpawnProtection.contains(damaged)
+					|| FpsWarpListener.onFpsSpawnProtection.contains(damaged)) {
 				return;
 			}
 			if (KitAPI.getKit(damaged) == "Boxer") {

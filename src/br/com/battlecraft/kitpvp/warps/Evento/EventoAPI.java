@@ -13,23 +13,23 @@ public final class EventoAPI {
 
 	public static boolean onEvent = false;
 	public static int maxEventSlots = 30;
-	
+
 	public static final ArrayList<String> Players = new ArrayList<>();
-	
+
 	public static boolean onBuild = false;
-	
+
 	public static int eventtime = 241;
-	
+
 	public static BukkitTask task;
-	
+
 	public static boolean blocked = false;
-	
+
 	public static enum EventMode {
 		INICIANDO, ANDAMENTO, FECHADO
 	}
-	
+
 	public static EventMode mode = EventMode.FECHADO;
-	
+
 	public static final void startEvent() {
 		if (!onEvent) {
 			return;
@@ -53,7 +53,8 @@ public final class EventoAPI {
 					Bukkit.getServer().broadcastMessage("§3§lEVENTO§f iniciará em §c§l2 minutos§f! /warp evento");
 					break;
 				case 90:
-					Bukkit.getServer().broadcastMessage("§3§lEVENTO§f iniciará em §c§l1 minuto e 30 segundos§f! /warp evento");
+					Bukkit.getServer()
+							.broadcastMessage("§3§lEVENTO§f iniciará em §c§l1 minuto e 30 segundos§f! /warp evento");
 					break;
 				case 60:
 					Bukkit.getServer().broadcastMessage("§3§lEVENTO§f iniciará em §c§l1 minuto§f! /warp evento");
@@ -88,7 +89,7 @@ public final class EventoAPI {
 			}
 		}.runTaskTimer(BukkitMain.getPlugin(), 0, 20L);
 	}
-	
+
 	public static final void runEvent() {
 		for (String all : Players) {
 			if (Bukkit.getPlayer(all) != null) {

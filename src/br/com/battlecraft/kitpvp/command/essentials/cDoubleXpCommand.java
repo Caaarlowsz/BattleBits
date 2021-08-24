@@ -43,8 +43,8 @@ public final class cDoubleXpCommand extends Command {
 				} else if (args[0].equalsIgnoreCase("add")) {
 					try {
 						AccountAPI.addBattlePlayerDoubleXp(moff, Integer.valueOf(args[2]));
-						bp.sendMessage(
-								"§3§lDOUBLEXP§f Você adicionou §b§l" + args[2] + " DOUBLEXPs§f para a conta do player " + args[1]);
+						bp.sendMessage("§3§lDOUBLEXP§f Você adicionou §b§l" + args[2]
+								+ " DOUBLEXPs§f para a conta do player " + args[1]);
 						return true;
 					} catch (Exception e) {
 						bp.sendMessage(
@@ -59,7 +59,8 @@ public final class cDoubleXpCommand extends Command {
 							return true;
 						}
 						AccountAPI.removeBattlePlayerDoubleXp(moff, Integer.valueOf(args[2]));
-						bp.sendMessage("§3§lDOUBLEXP§f Você removeu §b§l" + args[2] + " DOUBLEXPs§f da conta do player " + args[1]);
+						bp.sendMessage("§3§lDOUBLEXP§f Você removeu §b§l" + args[2] + " DOUBLEXPs§f da conta do player "
+								+ args[1]);
 						return true;
 					} catch (Exception e) {
 						bp.sendMessage(
@@ -74,8 +75,10 @@ public final class cDoubleXpCommand extends Command {
 			} else if (args[0].equalsIgnoreCase("add")) {
 				try {
 					AccountAPI.addBattlePlayerDoubleXp(m, Integer.valueOf(args[2]));
-					m.sendMessage("§3§lDOUBLEXP§f Foram §a§ladicionadas§f na sua conta §b§l" + args[2] + " DOUBLEXPs§f pelo " + bp.getName());
-					bp.sendMessage("§3§lDOUBLEXP§f Você adicionou §b§l" + args[2] + " DOUBLEXPs§f para a conta do player " + args[1]);
+					m.sendMessage("§3§lDOUBLEXP§f Foram §a§ladicionadas§f na sua conta §b§l" + args[2]
+							+ " DOUBLEXPs§f pelo " + bp.getName());
+					bp.sendMessage("§3§lDOUBLEXP§f Você adicionou §b§l" + args[2]
+							+ " DOUBLEXPs§f para a conta do player " + args[1]);
 					return true;
 				} catch (Exception e) {
 					bp.sendMessage(
@@ -90,8 +93,10 @@ public final class cDoubleXpCommand extends Command {
 						return true;
 					}
 					AccountAPI.removeBattlePlayerDoubleXp(m, Integer.valueOf(args[2]));
-					m.sendMessage("§3§lDOUBLEXP§f Foram §c§lremovidas§f da sua conta §b§l" + args[2] + " DOUBLEXPs§f pelo " + bp.getName());
-					bp.sendMessage("§3§lDOUBLEXP§f Você removeu §b§l" + args[2] + " DOUBLEXPs§f da conta do player " + args[1]);
+					m.sendMessage("§3§lDOUBLEXP§f Foram §c§lremovidas§f da sua conta §b§l" + args[2]
+							+ " DOUBLEXPs§f pelo " + bp.getName());
+					bp.sendMessage("§3§lDOUBLEXP§f Você removeu §b§l" + args[2] + " DOUBLEXPs§f da conta do player "
+							+ args[1]);
 					return true;
 				} catch (Exception e) {
 					bp.sendMessage(

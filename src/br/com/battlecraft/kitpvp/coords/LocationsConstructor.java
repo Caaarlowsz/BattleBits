@@ -14,12 +14,12 @@ public final class LocationsConstructor {
 		LocationsFile.getWarpsFile().set("BattleWarps." + warpName + ".World", bp.getWorld().getName());
 		LocationsFile.saveWarpsFile();
 	}
-	
+
 	public static final void setBattleWarpSpawnDistanceProtection(final int distance) {
 		LocationsFile.getWarpsFile().set("SpawnProtections." + "SPAWN" + ".Distance", distance);
 		LocationsFile.saveWarpsFile();
 	}
-	
+
 	public static final void setBattleWarpFpsDistanceProtection(final int distance) {
 		LocationsFile.getWarpsFile().set("SpawnProtections." + "FPS" + ".Distance", distance);
 		LocationsFile.saveWarpsFile();

@@ -7,7 +7,7 @@ import org.bukkit.entity.Player;
 import br.com.battlecraft.kitpvp.account.AccountConstructor;
 
 public final class ReportsAPI {
-	
+
 	/**
 	 * Simple Report Manager
 	 */
@@ -19,7 +19,8 @@ public final class ReportsAPI {
 	public static final void addReportToBattleStaff(final Player staff, final String reporter, final String reported,
 			final String reportMotive) {
 		if (totalReports.containsKey(staff.getName()) && totalReports.get(staff.getName()) >= 224) {
-			staff.sendMessage("§3§lREPORT§f Você possui um §c§lMAXIMO DE " + totalReports.get(staff.getName()) + " REPORTS§f!");
+			staff.sendMessage(
+					"§3§lREPORT§f Você possui um §c§lMAXIMO DE " + totalReports.get(staff.getName()) + " REPORTS§f!");
 			return;
 		} else if (totalReports.containsKey(staff.getName()) && totalReports.get(staff.getName()) < 224) {
 			final int total = totalReports.get(staff.getName());
@@ -28,7 +29,8 @@ public final class ReportsAPI {
 					new String[] { "§fPlayer: §b" + reported, "§f§m-----------§f", "§fMotivo: §b" + reportMotive,
 							"§b§m-----------§f", "§fReporter: §b" + reporter, "§3§m-----------§f",
 							"§fHorario do Report: §b" + AccountConstructor.BrasilTime() });
-			staff.sendMessage("§3§lREPORT§f Você tem §3§l" + ReportsAPI.totalReports.get(staff.getName()) + " REPORTs§f no momento!");
+			staff.sendMessage("§3§lREPORT§f Você tem §3§l" + ReportsAPI.totalReports.get(staff.getName())
+					+ " REPORTs§f no momento!");
 			return;
 		} else {
 			totalReports.put(staff.getName(), 1);
@@ -36,7 +38,8 @@ public final class ReportsAPI {
 					new String[] { "§fPlayer: §b" + reported, "§f§m-----------§f", "§fMotivo: §b" + reportMotive,
 							"§b§m-----------§f", "§fReporter: §b" + reporter, "§3§m-----------§f",
 							"§fHorario do Report: §b" + AccountConstructor.BrasilTime() });
-			staff.sendMessage("§3§lREPORT§f Você tem §3§l" + ReportsAPI.totalReports.get(staff.getName()) + " REPORT§f no momento! Utilize: /report list");
+			staff.sendMessage("§3§lREPORT§f Você tem §3§l" + ReportsAPI.totalReports.get(staff.getName())
+					+ " REPORT§f no momento! Utilize: /report list");
 		}
 	}
 

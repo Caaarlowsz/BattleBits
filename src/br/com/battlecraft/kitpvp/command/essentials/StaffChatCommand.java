@@ -15,9 +15,9 @@ public final class StaffChatCommand extends Command {
 	public StaffChatCommand(String name, String description, String usageMessage, List<String> aliases) {
 		super(name, description, usageMessage, aliases);
 	}
-	
+
 	public static final ArrayList<Player> staffchat = new ArrayList<>();
-	
+
 	public static final boolean onStaffChat(final Player bp) {
 		return (staffchat.contains(bp) ? true : false);
 	}
